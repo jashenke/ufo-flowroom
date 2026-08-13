@@ -1,0 +1,50 @@
+{
+  "published_at": "2026-08-13T11:22:24.303893",
+  "kw": 33,
+  "year": 2026,
+  "week_sun": "2026-08-09",
+  "planned_week": "",
+  "rules": [
+    {
+      "rule": "OB Plan: Shipments incl. FRACS",
+      "passed": true,
+      "value": null,
+      "threshold": null,
+      "detail": "No Rodeo CPT/FRACS data -- plan target unknown"
+    },
+    {
+      "rule": "CPT Solve (0-24h)",
+      "passed": true,
+      "value": null,
+      "threshold": null,
+      "detail": "No CPT data from Rodeo in next 24h"
+    },
+    {
+      "rule": "Unload Delay (0-48h)",
+      "passed": true,
+      "value": 16698,
+      "threshold": 16320.0,
+      "detail": "23 trucks across 0-48h within capacity (16,320 u/day at 85% risk)"
+    },
+    {
+      "rule": "MHC (IB Dock, next 72h)",
+      "passed": true,
+      "value": 25,
+      "threshold": 800,
+      "detail": "25 pallets vs MHC 800 (simulation)"
+    }
+  ],
+  "perf_w2d": {
+    "ob_units_wtd": 5465,
+    "ob_units_live": 6965,
+    "ob_tph_wtd": 1366.2,
+    "ib_units_wtd": 185351,
+    "ib_units_live": 185351
+  },
+  "labour_plan": {
+    "available_h": 12096.0,
+    "ob_h": 702.5,
+    "ib_h": 0.0,
+    "unassigned_h": 11393.5
+  }
+}
