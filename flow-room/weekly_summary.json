@@ -1,5 +1,5 @@
 {
-  "published_at": "2026-08-13T11:22:24.303893",
+  "published_at": "2026-08-14T06:10:25.472757",
   "kw": 33,
   "year": 2026,
   "week_sun": "2026-08-09",
@@ -22,29 +22,29 @@
     {
       "rule": "Unload Delay (0-48h)",
       "passed": true,
-      "value": 16698,
+      "value": 7260,
       "threshold": 16320.0,
-      "detail": "23 trucks across 0-48h within capacity (16,320 u/day at 85% risk)"
+      "detail": "10 trucks across 0-48h within capacity (16,320 u/day at 85% risk)"
     },
     {
       "rule": "MHC (IB Dock, next 72h)",
       "passed": true,
-      "value": 25,
+      "value": 174,
       "threshold": 800,
-      "detail": "25 pallets vs MHC 800 (simulation)"
+      "detail": "174 pallets vs MHC 800 (simulation)"
     }
   ],
   "perf_w2d": {
-    "ob_units_wtd": 5465,
-    "ob_units_live": 6965,
-    "ob_tph_wtd": 1366.2,
-    "ib_units_wtd": 185351,
-    "ib_units_live": 185351
+    "ob_units_wtd": 17788,
+    "ob_units_live": 18381,
+    "ob_tph_wtd": 78.0,
+    "ib_units_wtd": 297113,
+    "ib_units_live": 299288
   },
   "labour_plan": {
-    "available_h": 12096.0,
-    "ob_h": 702.5,
+    "available_h": 11609.5,
+    "ob_h": 209.2,
     "ib_h": 0.0,
-    "unassigned_h": 11393.5
+    "unassigned_h": 11400.2
   }
 }
