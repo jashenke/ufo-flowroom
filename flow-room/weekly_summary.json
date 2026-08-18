@@ -1,50 +1,50 @@
 {
-  "published_at": "2026-08-17T05:34:56.485021",
+  "published_at": "2026-08-18T06:07:35.523890",
   "kw": 34,
   "year": 2026,
   "week_sun": "2026-08-16",
-  "planned_week": "",
+  "planned_week": "KW34 2026",
   "rules": [
     {
-      "rule": "OB Plan: Shipments incl. FRACS",
+      "rule": "OB Plan: Solve CPT & Forecasted Transfer Out Executed",
       "passed": true,
-      "value": null,
-      "threshold": null,
-      "detail": "No Rodeo CPT/FRACS data -- plan target unknown"
+      "value": 26621,
+      "threshold": 32793.03754935316,
+      "detail": "Target 26,621 units (incl. FRACS) over 35.1h | planned capacity 32,793 units (123% of target). IB staffed for max performance (no hard BL gate)."
     },
     {
       "rule": "CPT Solve (0-24h)",
-      "passed": true,
-      "value": null,
-      "threshold": null,
-      "detail": "No CPT data from Rodeo in next 24h"
+      "passed": false,
+      "value": 2,
+      "threshold": 0,
+      "detail": "At-risk: ['CPT Aug 18 18:15 (7,585 units, 11.3h)', 'CPT Aug 19 01:30 (9,225 units, 18.6h)']"
     },
     {
       "rule": "Unload Delay (0-48h)",
       "passed": true,
-      "value": 13794,
+      "value": 7986,
       "threshold": 16320.0,
-      "detail": "19 trucks across 0-48h within capacity (16,320 u/day at 85% risk)"
+      "detail": "11 trucks across 0-48h within capacity (16,320 u/day at 85% risk)"
     },
     {
       "rule": "MHC (IB Dock, next 72h)",
       "passed": true,
-      "value": 33,
+      "value": 5,
       "threshold": 800,
-      "detail": "33 pallets vs MHC 800 (simulation)"
+      "detail": "5 pallets vs MHC 800 (simulation)"
     }
   ],
   "perf_w2d": {
-    "ob_units_wtd": 0,
-    "ob_units_live": 4737,
-    "ob_tph_wtd": null,
-    "ib_units_wtd": 0,
-    "ib_units_live": 8869
+    "ob_units_wtd": 43830,
+    "ob_units_live": 53292,
+    "ob_tph_wtd": 139.1,
+    "ib_units_wtd": 20925,
+    "ib_units_live": 24668
   },
   "labour_plan": {
-    "available_h": 13757.5,
-    "ob_h": 333.2,
+    "available_h": 13308.8,
+    "ob_h": 341.0,
     "ib_h": 0.0,
-    "unassigned_h": 13424.2
+    "unassigned_h": 12967.8
   }
 }
