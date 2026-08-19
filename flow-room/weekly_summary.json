@@ -1,5 +1,5 @@
 {
-  "published_at": "2026-08-18T06:07:35.523890",
+  "published_at": "2026-08-19T06:11:18.127746",
   "kw": 34,
   "year": 2026,
   "week_sun": "2026-08-16",
@@ -8,43 +8,43 @@
     {
       "rule": "OB Plan: Solve CPT & Forecasted Transfer Out Executed",
       "passed": true,
-      "value": 26621,
-      "threshold": 32793.03754935316,
-      "detail": "Target 26,621 units (incl. FRACS) over 35.1h | planned capacity 32,793 units (123% of target). IB staffed for max performance (no hard BL gate)."
+      "value": 8996,
+      "threshold": 13792.460096961022,
+      "detail": "Target 8,996 units (incl. FRACS) over 18.6h | planned capacity 13,792 units (153% of target). IB staffed for max performance (no hard BL gate)."
     },
     {
       "rule": "CPT Solve (0-24h)",
       "passed": false,
       "value": 2,
       "threshold": 0,
-      "detail": "At-risk: ['CPT Aug 18 18:15 (7,585 units, 11.3h)', 'CPT Aug 19 01:30 (9,225 units, 18.6h)']"
+      "detail": "At-risk: ['CPT Aug 19 18:00 (5,262 units, 11.1h)', 'CPT Aug 19 21:30 (1,613 units, 14.6h)']"
     },
     {
       "rule": "Unload Delay (0-48h)",
       "passed": true,
-      "value": 7986,
+      "value": 13794,
       "threshold": 16320.0,
-      "detail": "11 trucks across 0-48h within capacity (16,320 u/day at 85% risk)"
+      "detail": "19 trucks across 0-48h within capacity (16,320 u/day at 85% risk)"
     },
     {
       "rule": "MHC (IB Dock, next 72h)",
       "passed": true,
-      "value": 5,
+      "value": 216,
       "threshold": 800,
-      "detail": "5 pallets vs MHC 800 (simulation)"
+      "detail": "216 pallets vs MHC 800 (simulation)"
     }
   ],
   "perf_w2d": {
-    "ob_units_wtd": 43830,
-    "ob_units_live": 53292,
-    "ob_tph_wtd": 139.1,
-    "ib_units_wtd": 20925,
-    "ib_units_live": 24668
+    "ob_units_wtd": 75154,
+    "ob_units_live": 79241,
+    "ob_tph_wtd": 104.7,
+    "ib_units_wtd": 33256,
+    "ib_units_live": 35189
   },
   "labour_plan": {
-    "available_h": 13308.8,
-    "ob_h": 341.0,
+    "available_h": 12739.2,
+    "ob_h": 0.0,
     "ib_h": 0.0,
-    "unassigned_h": 12967.8
+    "unassigned_h": 12739.2
   }
 }
