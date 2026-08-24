@@ -1,50 +1,175 @@
 {
-  "published_at": "2026-08-21T06:11:44.174643",
-  "kw": 34,
+  "published_at": "2026-08-24T13:45:09.004776",
+  "kw": 35,
   "year": 2026,
-  "week_sun": "2026-08-16",
-  "planned_week": "KW34 2026",
+  "week_sun": "2026-08-23",
+  "planned_week": "KW35 2026",
   "rules": [
     {
       "rule": "OB Plan: Solve CPT & Forecasted Transfer Out Executed",
       "passed": true,
-      "value": 54110,
-      "threshold": 266609.07817611645,
-      "detail": "Target 54,110 units (incl. FRACS) over 84.5h | planned capacity 266,609 units (493% of target). IB staffed for max performance (no hard BL gate)."
+      "value": 113915,
+      "threshold": 114445.60076195061,
+      "detail": "Target 113,915 units (incl. FRACS) over 34.7h | planned capacity 114,446 units (100% of target). IB staffed for max performance (no hard BL gate).",
+      "windows": null
     },
     {
       "rule": "CPT Solve (0-24h)",
       "passed": false,
-      "value": 1,
+      "value": 5,
       "threshold": 0,
-      "detail": "At-risk: ['CPT Aug 21 21:15 (18,474 units, 13.6h)']"
+      "detail": "At-risk: ['CPT Aug 24 21:45 (13,531 units, 7.0h)', 'CPT Aug 24 23:30 (18,195 units, 8.7h)', 'CPT Aug 24 23:45 (2,384 units, 9.0h)']…",
+      "windows": [
+        {
+          "id": "cpt_0824_1700",
+          "label": "CPT Aug 24 17:00",
+          "hours_ahead": 2.23,
+          "target_units": 475,
+          "not_yet_picked": 0,
+          "ready_to_pick": 0,
+          "capacity": 10876,
+          "ok": true
+        },
+        {
+          "id": "cpt_0824_1815",
+          "label": "CPT Aug 24 18:15",
+          "hours_ahead": 3.48,
+          "target_units": 2359,
+          "not_yet_picked": 0,
+          "ready_to_pick": 0,
+          "capacity": 6866,
+          "ok": true
+        },
+        {
+          "id": "cpt_0824_2015",
+          "label": "CPT Aug 24 20:15",
+          "hours_ahead": 5.48,
+          "target_units": 17077,
+          "not_yet_picked": 996,
+          "ready_to_pick": 996,
+          "capacity": 10986,
+          "ok": true
+        },
+        {
+          "id": "cpt_0824_2045",
+          "label": "CPT Aug 24 20:45",
+          "hours_ahead": 5.98,
+          "target_units": 9058,
+          "not_yet_picked": 78,
+          "ready_to_pick": 44,
+          "capacity": 2746,
+          "ok": true
+        },
+        {
+          "id": "cpt_0824_2130",
+          "label": "CPT Aug 24 21:30",
+          "hours_ahead": 6.73,
+          "target_units": 7326,
+          "not_yet_picked": 1571,
+          "ready_to_pick": 0,
+          "capacity": 4120,
+          "ok": true
+        },
+        {
+          "id": "cpt_0824_2145",
+          "label": "CPT Aug 24 21:45",
+          "hours_ahead": 6.98,
+          "target_units": 13531,
+          "not_yet_picked": 12072,
+          "ready_to_pick": 853,
+          "capacity": 1373,
+          "ok": false
+        },
+        {
+          "id": "cpt_0824_2330",
+          "label": "CPT Aug 24 23:30",
+          "hours_ahead": 8.73,
+          "target_units": 18195,
+          "not_yet_picked": 17438,
+          "ready_to_pick": 92,
+          "capacity": 2665,
+          "ok": false
+        },
+        {
+          "id": "cpt_0824_2345",
+          "label": "CPT Aug 24 23:45",
+          "hours_ahead": 8.98,
+          "target_units": 2384,
+          "not_yet_picked": 2245,
+          "ready_to_pick": 50,
+          "capacity": 865,
+          "ok": false
+        },
+        {
+          "id": "cpt_0825_0030",
+          "label": "CPT Aug 25 00:30",
+          "hours_ahead": 9.73,
+          "target_units": 1380,
+          "not_yet_picked": 1239,
+          "ready_to_pick": 0,
+          "capacity": 2596,
+          "ok": true
+        },
+        {
+          "id": "cpt_0825_0130",
+          "label": "CPT Aug 25 01:30",
+          "hours_ahead": 10.73,
+          "target_units": 6160,
+          "not_yet_picked": 3648,
+          "ready_to_pick": 0,
+          "capacity": 3461,
+          "ok": false
+        },
+        {
+          "id": "cpt_0825_0400",
+          "label": "CPT Aug 25 04:00",
+          "hours_ahead": 13.23,
+          "target_units": 39,
+          "not_yet_picked": 39,
+          "ready_to_pick": 0,
+          "capacity": 8652,
+          "ok": true
+        },
+        {
+          "id": "cpt_0825_0415",
+          "label": "CPT Aug 25 04:15",
+          "hours_ahead": 13.48,
+          "target_units": 3399,
+          "not_yet_picked": 2282,
+          "ready_to_pick": 40,
+          "capacity": 865,
+          "ok": false
+        }
+      ]
     },
     {
       "rule": "Unload Delay (0-48h)",
       "passed": true,
-      "value": 9438,
+      "value": 7260,
       "threshold": 16320.0,
-      "detail": "13 trucks across 0-48h within capacity (16,320 u/day at 85% risk)"
+      "detail": "10 trucks across 0-48h within capacity (16,320 u/day at 85% risk)",
+      "windows": null
     },
     {
       "rule": "MHC (IB Dock, next 72h)",
       "passed": true,
-      "value": 312,
+      "value": 24,
       "threshold": 800,
-      "detail": "312 pallets vs MHC 800 (simulation)"
+      "detail": "24 pallets vs MHC 800 (simulation)",
+      "windows": null
     }
   ],
   "perf_w2d": {
-    "ob_units_wtd": 116006,
-    "ob_units_live": 129694,
-    "ob_tph_wtd": 108.9,
-    "ib_units_wtd": 156516,
-    "ib_units_live": 162436
+    "ob_units_wtd": 0,
+    "ob_units_live": 43546,
+    "ob_tph_wtd": null,
+    "ib_units_wtd": 0,
+    "ib_units_live": 17687
   },
   "labour_plan": {
-    "available_h": 12263.2,
+    "available_h": 14103.0,
     "ob_h": 0.0,
     "ib_h": 0.0,
-    "unassigned_h": 12263.2
+    "unassigned_h": 14103.0
   }
 }
