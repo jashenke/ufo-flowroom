@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="refresh" content="60">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>UFO &Uuml;bergabe &middot; DRS8 &middot; ICQA_ES_SOS</title>
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{background:#0f172a;color:#e2e8f0;font-family:'Segoe UI',system-ui,sans-serif;padding:24px;min-height:100vh}
+    .header{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:24px}
+    .site{font-size:2.5rem;font-weight:800;color:#fff;letter-spacing:-1px}
+    .sub{font-size:1.4rem;color:#94a3b8;margin-top:4px}
+    .meta-r{text-align:right}
+    .time-str{font-size:1.4rem;color:#f1f5f9;font-weight:600}
+    .pub{font-size:.85rem;color:#64748b;margin-top:6px}
+    .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:24px}
+    .stat{background:#1e293b;border-radius:12px;padding:20px;text-align:center}
+    .stat-lbl{font-size:.8rem;color:#64748b;text-transform:uppercase;letter-spacing:.06em;margin-bottom:8px}
+    .stat-val{font-size:2.5rem;font-weight:800;color:#fff}
+    .stat-total .stat-val{color:#38bdf8}
+    .sec-title{font-size:.75rem;font-weight:600;text-transform:uppercase;letter-spacing:.1em;color:#475569;margin-bottom:12px}
+    table{width:100%;border-collapse:collapse}
+    th{text-align:left;font-size:.75rem;color:#64748b;text-transform:uppercase;letter-spacing:.05em;padding:8px 12px;border-bottom:1px solid #334155}
+    td{padding:10px 12px;border-bottom:1px solid #1e293b;font-size:1rem}
+    tr:hover td{background:#1e293b}
+    .name{font-weight:600;color:#f1f5f9}
+    .skill{color:#94a3b8}
+    .pp-badge{display:inline-block;padding:2px 8px;border-radius:6px;font-size:.75rem;font-weight:600}
+    .pp-pick{background:#1d4ed8;color:#bfdbfe}
+    .pp-pack{background:#7c3aed;color:#ddd6fe}
+    .pp-ship{background:#0f766e;color:#99f6e4}
+    .score{font-family:monospace;font-weight:700}
+    .score-green{color:#34d399}
+    .score-amber{color:#fbbf24}
+    .score-red{color:#f87171}
+    .score-none{color:#475569}
+    .unfilled{background:#450a0a;border:1px solid #991b1b;border-radius:12px;padding:16px 20px;margin-top:24px}
+    .unfilled-title{color:#fca5a5;font-weight:700;font-size:1rem;margin-bottom:8px}
+    .unfilled-item{color:#fca5a5;font-size:.9rem;padding:4px 0}
+    .critical-badge{background:#991b1b;color:#fecaca;font-size:.7rem;padding:2px 6px;border-radius:4px;margin-left:8px}
+    .footer{margin-top:24px;font-size:.75rem;color:#334155;text-align:right}
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div>
+      <div class="site">DRS8 &middot; ICQA_ES_SOS</div>
+      <div class="sub">Fr 28.08.2026</div>
+    </div>
+    <div class="meta-r">
+      <div class="time-str">04:28 Uhr</div>
+      <div class="pub">Aktualisierung alle 60&thinsp;s</div>
+    </div>
+  </div>
+
+  <div class="stats">
+    <div class="stat"><div class="stat-lbl">Pick</div><div class="stat-val">0</div></div>
+    <div class="stat"><div class="stat-lbl">Pack</div><div class="stat-val">0</div></div>
+    <div class="stat"><div class="stat-lbl">Ship</div><div class="stat-val">0</div></div>
+    <div class="stat stat-total"><div class="stat-lbl">Total HC</div><div class="stat-val">0</div></div>
+  </div>
+
+  <div class="sec-title">Einteilung &mdash; 0 Positionen</div>
+  <table>
+    <thead><tr>
+      <th>Name</th><th>Skill</th><th>Bereich</th>
+      <th title="Rotation score">R</th>
+      <th title="Fairness score">F</th>
+      <th title="Performance score">P</th>
+    </tr></thead>
+    <tbody>
+    </tbody>
+  </table>
+
+  <div class="unfilled">
+    <div class="unfilled-title">&#9888;&nbsp;Nicht besetzte Positionen (8)</div>
+      <div class="unfilled-item">&#9888; icqa &mdash; ICQA Simple Count</div>
+      <div class="unfilled-item">&#9888; icqa &mdash; ICQA Cycle Count</div>
+      <div class="unfilled-item">&#9888; icqa &mdash; ICQA Auditor</div>
+      <div class="unfilled-item">&#9888; icqa &mdash; ICQA PS</div>
+      <div class="unfilled-item">&#9888; icqa &mdash; ICQA PS</div>
+      <div class="unfilled-item">&#9888; icqa &mdash; ICQA Simple Count H3</div>
+      <div class="unfilled-item">&#9888; icqa &mdash; ICQA Cycle Count H3</div>
+      <div class="unfilled-item">&#9888; icqa &mdash; ICQA PS</div>
+  </div>
+  <div class="footer">UFO Engine &middot; DRS8 &middot; 2026-08-28 ICQA_ES_SOS &middot; 04:28</div>
+</body>
+</html>
