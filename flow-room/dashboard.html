@@ -59,11 +59,14 @@
     .v-warn{background:#7c2d124d;border-color:#9a3412;color:#fb923c}
     .v-crit{background:#7f1d1d4d;border-color:#991b1b;color:#f87171}
     .v-nocap{background:#78350f4d;border-color:#92400e;color:#fbbf24}
-    .lv-ok{color:#4ade80}
-    .lv-warn{color:#fb923c}
-    .lv-crit{color:#f87171}
-    .lv-nocap{color:#fbbf24}
-    .lv-none{color:#64748b}
+    /* Scoped under .ctbl on purpose: `.ctbl td` above already sets a colour with
+       specificity (0,1,1), so a bare `.lv-crit` (0,1,0) would lose to it and the
+       Auslastung/Status columns would render plain grey. */
+    .ctbl .lv-ok{color:#4ade80}
+    .ctbl .lv-warn{color:#fb923c}
+    .ctbl .lv-crit{color:#f87171}
+    .ctbl .lv-nocap{color:#fbbf24}
+    .ctbl .lv-none{color:#64748b}
     .ctbl .faint{color:#64748b}
     .ctbl .st{font-weight:600;font-size:.78rem}
   </style>
@@ -148,19 +151,19 @@
   <!-- Slide 2: the CPT table on its own -- 12 columns need the full width. -->
   <section class="page">
   <div class="card">
-    <div class="chdr"><span class="ctitle">OB CPT Windows</span><span><span class="badge b-slate">Rodeo &middot; next 24h</span><span class="sub" style="margin-left:6px">0.5m old</span><span class="vbadge v-crit">CPT-Risiko (&gt;95%)</span></span></div>
-    <table class="ctbl"><thead><tr><th>CPT</th><th class="num">Std.</th><th class="num">Units due</th><th class="num">Ready to Pick</th><th class="num">Not Yet Picked</th><th class="num">Picked</th><th class="num">Palletized</th><th class="num">Cum. Units Due</th><th class="num">Cum. Demand</th><th class="num">Capacity</th><th class="num">Auslastung</th><th class="num">Status</th></tr></thead><tbody><tr><td class="mono">CPT Aug 31 17:00</td><td class="num">4.7h</td><td class="num strong">2.194</td><td class="num">0</td><td class="num">0</td><td class="num">26</td><td class="num">2.168</td><td class="num faint">2.194</td><td class="num strong">0</td><td class="num">4.736</td><td class="num lv-ok">0%</td><td class="num st lv-ok">&#10003;</td></tr>
-<tr><td class="mono">CPT Aug 31 18:15</td><td class="num">5.9h</td><td class="num strong">6.496</td><td class="num">10</td><td class="num">5</td><td class="num">198</td><td class="num">6.283</td><td class="num faint">8.690</td><td class="num strong">15</td><td class="num">5.108</td><td class="num lv-ok">0%</td><td class="num st lv-ok">&#10003;</td></tr>
-<tr><td class="mono">CPT Aug 31 20:15</td><td class="num">7.9h</td><td class="num strong">2.419</td><td class="num">0</td><td class="num">65</td><td class="num">230</td><td class="num">2.124</td><td class="num faint">11.109</td><td class="num strong">80</td><td class="num">5.555</td><td class="num lv-ok">1%</td><td class="num st lv-ok">&#10003;</td></tr>
-<tr><td class="mono">CPT Aug 31 20:45</td><td class="num">8.4h</td><td class="num strong">5.172</td><td class="num">20</td><td class="num">4.785</td><td class="num">274</td><td class="num">93</td><td class="num faint">16.281</td><td class="num strong">4.885</td><td class="num">5.704</td><td class="num lv-warn">86%</td><td class="num st lv-warn">&#9888;</td></tr>
-<tr><td class="mono">CPT Aug 31 21:30</td><td class="num">9.2h</td><td class="num strong">2.731</td><td class="num">0</td><td class="num">2.629</td><td class="num">0</td><td class="num">102</td><td class="num faint">19.012</td><td class="num strong">7.514</td><td class="num">5.927</td><td class="num lv-crit">127%</td><td class="num st lv-crit">&#10007;</td></tr>
-<tr><td class="mono">CPT Aug 31 21:45</td><td class="num">9.4h</td><td class="num strong">8.335</td><td class="num">0</td><td class="num">8.153</td><td class="num">5</td><td class="num">177</td><td class="num faint">27.347</td><td class="num strong">15.667</td><td class="num">6.001</td><td class="num lv-crit">261%</td><td class="num st lv-crit">&#10007;</td></tr>
-<tr><td class="mono">CPT Aug 31 23:30</td><td class="num">11.2h</td><td class="num strong">10.990</td><td class="num">0</td><td class="num">10.518</td><td class="num">217</td><td class="num">255</td><td class="num faint">38.337</td><td class="num strong">26.185</td><td class="num">6.554</td><td class="num lv-crit">400%</td><td class="num st lv-crit">&#10007;</td></tr>
-<tr><td class="mono">CPT Aug 31 23:45</td><td class="num">11.4h</td><td class="num strong">2.256</td><td class="num">20</td><td class="num">2.113</td><td class="num">11</td><td class="num">112</td><td class="num faint">40.593</td><td class="num strong">28.318</td><td class="num">6.645</td><td class="num lv-crit">426%</td><td class="num st lv-crit">&#10007;</td></tr>
-<tr><td class="mono">CPT Sep 01 00:30</td><td class="num">12.2h</td><td class="num strong">853</td><td class="num">0</td><td class="num">617</td><td class="num">63</td><td class="num">173</td><td class="num faint">41.446</td><td class="num strong">28.935</td><td class="num">6.916</td><td class="num lv-crit">418%</td><td class="num st lv-crit">&#10007;</td></tr>
-<tr><td class="mono">CPT Sep 01 01:30</td><td class="num">13.2h</td><td class="num strong">1.138</td><td class="num">0</td><td class="num">1.126</td><td class="num">12</td><td class="num">0</td><td class="num faint">42.584</td><td class="num strong">30.061</td><td class="num">7.277</td><td class="num lv-crit">413%</td><td class="num st lv-crit">&#10007;</td></tr>
-<tr><td class="mono">CPT Sep 01 04:00</td><td class="num">15.7h</td><td class="num strong">4.032</td><td class="num">24</td><td class="num">3.783</td><td class="num">6</td><td class="num">219</td><td class="num faint">46.616</td><td class="num strong">33.868</td><td class="num">8.000</td><td class="num lv-crit">423%</td><td class="num st lv-crit">&#10007;</td></tr>
-<tr><td class="mono">CPT Sep 01 04:15</td><td class="num">15.9h</td><td class="num strong">1.435</td><td class="num">33</td><td class="num">1.393</td><td class="num">0</td><td class="num">9</td><td class="num faint">48.051</td><td class="num strong">35.294</td><td class="num">8.090</td><td class="num lv-crit">436%</td><td class="num st lv-crit">&#10007;</td></tr>
+    <div class="chdr"><span class="ctitle">OB CPT Windows</span><span><span class="badge b-slate">Rodeo &middot; next 24h</span><span class="sub" style="margin-left:6px">0.9m old</span><span class="vbadge v-crit">CPT-Risiko (&gt;95%)</span></span></div>
+    <table class="ctbl"><thead><tr><th>CPT</th><th class="num">Std.</th><th class="num">Units due</th><th class="num">Ready to Pick</th><th class="num">Not Yet Picked</th><th class="num">Picked</th><th class="num">Palletized</th><th class="num">Cum. Units Due</th><th class="num">Cum. Demand</th><th class="num">Capacity</th><th class="num">Auslastung</th><th class="num">Status</th></tr></thead><tbody><tr><td class="mono">CPT Aug 31 17:00</td><td class="num">4.6h</td><td class="num strong">2.194</td><td class="num">0</td><td class="num">0</td><td class="num">26</td><td class="num">2.168</td><td class="num faint">2.194</td><td class="num strong">0</td><td class="num">4.722</td><td class="num lv-ok">0%</td><td class="num st lv-ok">&#10003;</td></tr>
+<tr><td class="mono">CPT Aug 31 18:15</td><td class="num">5.9h</td><td class="num strong">6.496</td><td class="num">10</td><td class="num">5</td><td class="num">198</td><td class="num">6.283</td><td class="num faint">8.690</td><td class="num strong">15</td><td class="num">5.094</td><td class="num lv-ok">0%</td><td class="num st lv-ok">&#10003;</td></tr>
+<tr><td class="mono">CPT Aug 31 20:15</td><td class="num">7.9h</td><td class="num strong">2.419</td><td class="num">0</td><td class="num">65</td><td class="num">230</td><td class="num">2.124</td><td class="num faint">11.109</td><td class="num strong">80</td><td class="num">5.540</td><td class="num lv-ok">1%</td><td class="num st lv-ok">&#10003;</td></tr>
+<tr><td class="mono">CPT Aug 31 20:45</td><td class="num">8.4h</td><td class="num strong">5.172</td><td class="num">20</td><td class="num">4.785</td><td class="num">274</td><td class="num">93</td><td class="num faint">16.281</td><td class="num strong">4.885</td><td class="num">5.689</td><td class="num lv-warn">86%</td><td class="num st lv-warn">&#9888;</td></tr>
+<tr><td class="mono">CPT Aug 31 21:30</td><td class="num">9.1h</td><td class="num strong">2.731</td><td class="num">0</td><td class="num">2.629</td><td class="num">0</td><td class="num">102</td><td class="num faint">19.012</td><td class="num strong">7.514</td><td class="num">5.912</td><td class="num lv-crit">127%</td><td class="num st lv-crit">&#10007;</td></tr>
+<tr><td class="mono">CPT Aug 31 21:45</td><td class="num">9.4h</td><td class="num strong">8.335</td><td class="num">0</td><td class="num">8.153</td><td class="num">5</td><td class="num">177</td><td class="num faint">27.347</td><td class="num strong">15.667</td><td class="num">5.987</td><td class="num lv-crit">262%</td><td class="num st lv-crit">&#10007;</td></tr>
+<tr><td class="mono">CPT Aug 31 23:30</td><td class="num">11.1h</td><td class="num strong">10.990</td><td class="num">0</td><td class="num">10.518</td><td class="num">217</td><td class="num">255</td><td class="num faint">38.337</td><td class="num strong">26.185</td><td class="num">6.539</td><td class="num lv-crit">400%</td><td class="num st lv-crit">&#10007;</td></tr>
+<tr><td class="mono">CPT Aug 31 23:45</td><td class="num">11.4h</td><td class="num strong">2.256</td><td class="num">20</td><td class="num">2.113</td><td class="num">11</td><td class="num">112</td><td class="num faint">40.593</td><td class="num strong">28.318</td><td class="num">6.630</td><td class="num lv-crit">427%</td><td class="num st lv-crit">&#10007;</td></tr>
+<tr><td class="mono">CPT Sep 01 00:30</td><td class="num">12.1h</td><td class="num strong">853</td><td class="num">0</td><td class="num">617</td><td class="num">63</td><td class="num">173</td><td class="num faint">41.446</td><td class="num strong">28.935</td><td class="num">6.901</td><td class="num lv-crit">419%</td><td class="num st lv-crit">&#10007;</td></tr>
+<tr><td class="mono">CPT Sep 01 01:30</td><td class="num">13.1h</td><td class="num strong">1.138</td><td class="num">0</td><td class="num">1.126</td><td class="num">12</td><td class="num">0</td><td class="num faint">42.584</td><td class="num strong">30.061</td><td class="num">7.262</td><td class="num lv-crit">414%</td><td class="num st lv-crit">&#10007;</td></tr>
+<tr><td class="mono">CPT Sep 01 04:00</td><td class="num">15.6h</td><td class="num strong">4.032</td><td class="num">24</td><td class="num">3.783</td><td class="num">6</td><td class="num">219</td><td class="num faint">46.616</td><td class="num strong">33.868</td><td class="num">7.985</td><td class="num lv-crit">424%</td><td class="num st lv-crit">&#10007;</td></tr>
+<tr><td class="mono">CPT Sep 01 04:15</td><td class="num">15.9h</td><td class="num strong">1.435</td><td class="num">33</td><td class="num">1.393</td><td class="num">0</td><td class="num">9</td><td class="num faint">48.051</td><td class="num strong">35.294</td><td class="num">8.075</td><td class="num lv-crit">437%</td><td class="num st lv-crit">&#10007;</td></tr>
 </tbody></table>
   </div>
   </section>
@@ -170,7 +173,7 @@
 
 <script>
 (function () {
-  var PAGE_MS = 10000;
+  var PAGE_MS = 30000;
   var pages = [].slice.call(document.querySelectorAll('.page'));
   var ind   = document.getElementById('pind');
   var wrap  = document.getElementById('fit');
