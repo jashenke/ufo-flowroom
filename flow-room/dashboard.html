@@ -6,12 +6,7 @@
   <title>UFO &ndash; Engine Monitor</title>
   <style>
     *{box-sizing:border-box;margin:0;padding:0}
-    body{background:#0f172a;color:#e2e8f0;font-family:'Segoe UI',system-ui,sans-serif;padding:20px;height:100vh;overflow:hidden}
-    /* Slide paging + shrink-to-fit -- see _PAGER_JS. */
-    #fit{transform-origin:top left}
-    .page{display:none}
-    .page.pg-on{display:block}
-    .pind{margin-left:8px;color:#475569}
+    body{background:#0f172a;color:#e2e8f0;font-family:'Segoe UI',system-ui,sans-serif;padding:20px;min-height:100vh}
     .header{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px}
     .htitle{display:flex;align-items:center;gap:10px}
     .dot{width:10px;height:10px;border-radius:50%;background:#fbbf24}
@@ -31,13 +26,7 @@
     .cl .no{color:#475569}
     .cl.off .lbl{color:#64748b}
     .cl.on .lbl{color:#e2e8f0}
-    .cl .unk{color:#fbbf24;font-weight:700}
-    .cl.unk .lbl{color:#cbd5e1}
-    .cl.unk .det{color:#fbbf24cc}
-    /* Clipped, not wrapped: an exception string here must not reflow the card. */
-    .cl .det{margin-left:auto;font-size:.75rem;color:#34d399cc;font-family:monospace;
-             max-width:52%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-    .cl.off .det{color:#94a3b8cc}
+    .cl .det{margin-left:auto;font-size:.75rem;color:#34d399cc;font-family:monospace}
     .repcard{background:#1e293b;border-radius:12px;overflow:hidden;margin-bottom:14px}
     .rephdr-row{display:flex;align-items:center;justify-content:space-between;padding:10px 14px;border-bottom:1px solid #334155}
     .repbody{display:grid;grid-template-columns:repeat(3,1fr)}
@@ -49,77 +38,49 @@
     .utag{font-size:.65rem;font-weight:700;color:#94a3b8;text-transform:uppercase}
     .uort{font-size:.85rem;font-weight:600;color:#f1f5f9}
     .dim{font-size:.85rem;color:#64748b}
-    .ctbl{width:100%;border-collapse:collapse;font-size:.85rem}
-    .ctbl th{font-size:.7rem;font-weight:600;color:#94a3b8;text-align:left;
-              padding:6px 12px 6px 0;border-bottom:1px solid #334155}
-    .ctbl td{padding:5px 12px 5px 0;border-bottom:1px solid #334155cc;color:#cbd5e1}
-    .ctbl tr:last-child td{border-bottom:none}
-    .ctbl .num{text-align:right;padding-right:0;padding-left:12px}
-    .ctbl th.num{text-align:right}
-    .ctbl .mono{font-family:monospace;color:#e2e8f0}
-    .ctbl .strong{color:#fff;font-weight:600}
     .footer{margin-top:14px;font-size:.7rem;color:#334155;text-align:right}
-    /* CPT verdict pill + per-row risk tiers, colours matched to the live page. */
-    .vbadge{font-size:.7rem;font-weight:600;padding:2px 7px;border-radius:6px;border:1px solid;margin-left:6px}
-    .v-ok{background:#064e3b4d;border-color:#065f46;color:#4ade80}
-    .v-warn{background:#7c2d124d;border-color:#9a3412;color:#fb923c}
-    .v-crit{background:#7f1d1d4d;border-color:#991b1b;color:#f87171}
-    .v-nocap{background:#78350f4d;border-color:#92400e;color:#fbbf24}
-    /* Scoped under .ctbl on purpose: `.ctbl td` above already sets a colour with
-       specificity (0,1,1), so a bare `.lv-crit` (0,1,0) would lose to it and the
-       Auslastung/Status columns would render plain grey. */
-    .ctbl .lv-ok{color:#4ade80}
-    .ctbl .lv-warn{color:#fb923c}
-    .ctbl .lv-crit{color:#f87171}
-    .ctbl .lv-nocap{color:#fbbf24}
-    .ctbl .lv-none{color:#64748b}
-    .ctbl .faint{color:#64748b}
-    .ctbl .st{font-weight:600;font-size:.78rem}
   </style>
 </head>
 <body>
-  <div id="fit">
   <div class="header">
     <div class="htitle">
       <div class="dot"></div>
       <h1>UFO &ndash; Engine Monitor</h1>
-      <span class="sub">2026-08-31 &middot; 13/28</span>
+      <span class="sub">2026-09-01 &middot; 4/28</span>
     </div>
-    <span class="sub">22:35 Uhr</span>
+    <span class="sub">05:19 Uhr</span>
   </div>
 
-  <!-- Slide 1: the three engine cards + Reporting + OB Uebergabeort. -->
-  <section class="page pg-on">
   <div class="grid3">
     <div class="card">
-      <div class="chdr"><span class="ctitle">Capacity</span><span class="badge b-amber">3/5</span></div>
+      <div class="chdr"><span class="ctitle">Capacity</span><span class="badge b-amber">2/5</span></div>
       <div class="cl off"><span class="no">&#10007;</span><span class="lbl">OB Plan: Solve CPT & Forecasted Transfer Out Executed</span></div>
-<div class="cl unk"><span class="unk">?</span><span class="lbl">CPT Solve (0-24h)</span><span class="det">live: keine CPT-Daten</span></div>
+<div class="cl off"><span class="no">&#10007;</span><span class="lbl">CPT Solve (0-24h)</span></div>
 <div class="cl on"><span class="ok">&#10003;</span><span class="lbl">Unload Delay (0-48h)</span></div>
 <div class="cl on"><span class="ok">&#10003;</span><span class="lbl">MHC (IB Dock, next 72h)</span></div>
-<div class="cl on"><span class="ok">&#10003;</span><span class="lbl">Last Uploaded Plan</span><span class="det">31.08 18:07</span></div>
+<div class="cl off"><span class="no">&#10007;</span><span class="lbl">Last Uploaded Plan</span></div>
 
     </div>
     <div class="card">
-      <div class="chdr"><span class="ctitle">Workflow</span><span class="badge b-amber">1/3</span></div>
+      <div class="chdr"><span class="ctitle">Workflow</span><span class="badge b-slate">0/3</span></div>
       <div class="cl off"><span class="no">&#10007;</span><span class="lbl">Last Hourly Plan Upload</span></div>
 <div class="cl off"><span class="no">&#10007;</span><span class="lbl">PDA</span></div>
-<div class="cl on"><span class="ok">&#10003;</span><span class="lbl">Daily ES Plan + ALPS</span><span class="det">07:58</span></div>
+<div class="cl off"><span class="no">&#10007;</span><span class="lbl">Daily ES Plan + ALPS</span></div>
 
     </div>
     <div class="card">
       <div class="chdr"><span class="ctitle">Einteilung</span><span class="badge b-amber">2/5</span></div>
-      <div class="cl on"><span class="ok">&#10003;</span><span class="lbl">ES SOS</span><span class="det">11:20</span></div>
+      <div class="cl on"><span class="ok">&#10003;</span><span class="lbl">ES SOS</span><span class="det">10:17</span></div>
 <div class="cl off"><span class="no">&#10007;</span><span class="lbl">PTS SOS</span></div>
 <div class="cl off"><span class="no">&#10007;</span><span class="lbl">MS SOS</span></div>
-<div class="cl on"><span class="ok">&#10003;</span><span class="lbl">LS SOS</span><span class="det">19:30</span></div>
+<div class="cl on"><span class="ok">&#10003;</span><span class="lbl">LS SOS</span><span class="det">18:24</span></div>
 <div class="cl off"><span class="no">&#10007;</span><span class="lbl">DNS SOS</span></div>
 
     </div>
   </div>
 
   <div class="repcard">
-    <div class="rephdr-row"><span class="ctitle">Reporting</span><span class="badge b-amber">7/15</span></div>
+    <div class="rephdr-row"><span class="ctitle">Reporting</span><span class="badge b-slate">0/15</span></div>
     <div class="repbody">
       <div class="repcol"><div class="rephdr">DNS</div><div class="cl off"><span class="no">&#10007;</span><span class="lbl">Flowmeeting I</span></div>
 <div class="cl off"><span class="no">&#10007;</span><span class="lbl">Daily Plan</span></div>
@@ -127,16 +88,16 @@
 <div class="cl off"><span class="no">&#10007;</span><span class="lbl">Weekly Update</span></div>
 <div class="cl off"><span class="no">&#10007;</span><span class="lbl">Shiftwash</span></div>
 </div>
-<div class="repcol"><div class="rephdr">ES</div><div class="cl on"><span class="ok">&#10003;</span><span class="lbl">Flowmeeting I</span><span class="det">07:54</span></div>
-<div class="cl on"><span class="ok">&#10003;</span><span class="lbl">Daily Plan</span><span class="det">07:58</span></div>
-<div class="cl on"><span class="ok">&#10003;</span><span class="lbl">Flowmeeting II</span><span class="det">10:11</span></div>
-<div class="cl on"><span class="ok">&#10003;</span><span class="lbl">Weekly Update</span><span class="det">14:49</span></div>
+<div class="repcol"><div class="rephdr">ES</div><div class="cl off"><span class="no">&#10007;</span><span class="lbl">Flowmeeting I</span></div>
+<div class="cl off"><span class="no">&#10007;</span><span class="lbl">Daily Plan</span></div>
+<div class="cl off"><span class="no">&#10007;</span><span class="lbl">Flowmeeting II</span></div>
+<div class="cl off"><span class="no">&#10007;</span><span class="lbl">Weekly Update</span></div>
 <div class="cl off"><span class="no">&#10007;</span><span class="lbl">Shiftwash</span></div>
 </div>
-<div class="repcol"><div class="rephdr">LS</div><div class="cl on"><span class="ok">&#10003;</span><span class="lbl">Flowmeeting I</span><span class="det">20:12</span></div>
-<div class="cl on"><span class="ok">&#10003;</span><span class="lbl">Daily Plan</span><span class="det">16:37</span></div>
+<div class="repcol"><div class="rephdr">LS</div><div class="cl off"><span class="no">&#10007;</span><span class="lbl">Flowmeeting I</span></div>
+<div class="cl off"><span class="no">&#10007;</span><span class="lbl">Daily Plan</span></div>
 <div class="cl off"><span class="no">&#10007;</span><span class="lbl">Flowmeeting II</span></div>
-<div class="cl on"><span class="ok">&#10003;</span><span class="lbl">Weekly Update</span><span class="det">18:07</span></div>
+<div class="cl off"><span class="no">&#10007;</span><span class="lbl">Weekly Update</span></div>
 <div class="cl off"><span class="no">&#10007;</span><span class="lbl">Shiftwash</span></div>
 </div>
 
@@ -152,71 +113,7 @@
 <div class="ucard"><span class="utag">Fr</span><span class="uort">Ladestationen PUP</span></div>
 </div>
   </div>
-  </section>
 
-  <!-- Slide 2: the CPT table on its own -- 12 columns need the full width. -->
-  <section class="page">
-  <div class="card">
-    <div class="chdr"><span class="ctitle">OB CPT Windows</span><span><span class="badge b-slate">Rodeo &middot; next 24h</span><span class="sub" style="margin-left:6px">30.9m old</span><span class="vbadge v-nocap">keine nutzbare Cap</span></span></div>
-    <table class="ctbl"><thead><tr><th>CPT</th><th class="num">Std.</th><th class="num">Units due</th><th class="num">Ready to Pick</th><th class="num">Not Yet Picked</th><th class="num">Picked</th><th class="num">Palletized</th><th class="num">Cum. Units Due</th><th class="num">Cum. Demand</th><th class="num">Capacity</th><th class="num">Auslastung</th><th class="num">Status</th></tr></thead><tbody><tr><td class="mono">CPT Aug 31 23:30</td><td class="num">0.9h</td><td class="num strong">10.988</td><td class="num">0</td><td class="num">0</td><td class="num">483</td><td class="num">10.505</td><td class="num faint">10.988</td><td class="num strong">0</td><td class="num"><span class="lv-nocap">keine nutzbare Cap</span></td><td class="num lv-nocap">--</td><td class="num st lv-nocap">&#9888;</td></tr>
-<tr><td class="mono">CPT Aug 31 23:45</td><td class="num">1.1h</td><td class="num strong">2.255</td><td class="num">20</td><td class="num">0</td><td class="num">1</td><td class="num">2.234</td><td class="num faint">13.243</td><td class="num strong">20</td><td class="num"><span class="lv-nocap">keine nutzbare Cap</span></td><td class="num lv-nocap">--</td><td class="num st lv-nocap">&#9888;</td></tr>
-<tr><td class="mono">CPT Sep 01 00:30</td><td class="num">1.9h</td><td class="num strong">851</td><td class="num">0</td><td class="num">0</td><td class="num">57</td><td class="num">794</td><td class="num faint">14.094</td><td class="num strong">20</td><td class="num"><span class="lv-nocap">keine nutzbare Cap</span></td><td class="num lv-nocap">--</td><td class="num st lv-nocap">&#9888;</td></tr>
-<tr><td class="mono">CPT Sep 01 01:30</td><td class="num">2.9h</td><td class="num strong">1.138</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">1.138</td><td class="num faint">15.232</td><td class="num strong">20</td><td class="num"><span class="lv-nocap">keine nutzbare Cap</span></td><td class="num lv-nocap">--</td><td class="num st lv-nocap">&#9888;</td></tr>
-<tr><td class="mono">CPT Sep 01 04:00</td><td class="num">5.4h</td><td class="num strong">83</td><td class="num">24</td><td class="num">5</td><td class="num">35</td><td class="num">19</td><td class="num faint">15.315</td><td class="num strong">49</td><td class="num"><span class="lv-nocap">keine nutzbare Cap</span></td><td class="num lv-nocap">--</td><td class="num st lv-nocap">&#9888;</td></tr>
-<tr><td class="mono">CPT Sep 01 04:15</td><td class="num">5.7h</td><td class="num strong">1.435</td><td class="num">33</td><td class="num">1.275</td><td class="num">60</td><td class="num">67</td><td class="num faint">16.750</td><td class="num strong">1.357</td><td class="num"><span class="lv-nocap">keine nutzbare Cap</span></td><td class="num lv-nocap">--</td><td class="num st lv-nocap">&#9888;</td></tr>
-<tr><td class="mono">CPT Sep 01 17:00</td><td class="num">18.4h</td><td class="num strong">1.503</td><td class="num">0</td><td class="num">1.497</td><td class="num">0</td><td class="num">6</td><td class="num faint">18.253</td><td class="num strong">2.854</td><td class="num"><span class="lv-nocap">keine nutzbare Cap</span></td><td class="num lv-nocap">--</td><td class="num st lv-nocap">&#9888;</td></tr>
-<tr><td class="mono">CPT Sep 01 18:15</td><td class="num">19.6h</td><td class="num strong">831</td><td class="num">0</td><td class="num">831</td><td class="num">0</td><td class="num">0</td><td class="num faint">19.084</td><td class="num strong">3.685</td><td class="num"><span class="lv-nocap">keine nutzbare Cap</span></td><td class="num lv-nocap">--</td><td class="num st lv-nocap">&#9888;</td></tr>
-<tr><td class="mono">CPT Sep 01 20:15</td><td class="num">21.6h</td><td class="num strong">1.445</td><td class="num">0</td><td class="num">0</td><td class="num">98</td><td class="num">1.347</td><td class="num faint">20.529</td><td class="num strong">3.685</td><td class="num"><span class="lv-nocap">keine nutzbare Cap</span></td><td class="num lv-nocap">--</td><td class="num st lv-nocap">&#9888;</td></tr>
-<tr><td class="mono">CPT Sep 01 20:45</td><td class="num">22.1h</td><td class="num strong">6</td><td class="num">6</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num faint">20.535</td><td class="num strong">3.691</td><td class="num"><span class="lv-nocap">keine nutzbare Cap</span></td><td class="num lv-nocap">--</td><td class="num st lv-nocap">&#9888;</td></tr>
-<tr><td class="mono">CPT Sep 01 21:30</td><td class="num">22.9h</td><td class="num strong">1.461</td><td class="num">0</td><td class="num">1.461</td><td class="num">0</td><td class="num">0</td><td class="num faint">21.996</td><td class="num strong">5.152</td><td class="num"><span class="lv-nocap">keine nutzbare Cap</span></td><td class="num lv-nocap">--</td><td class="num st lv-nocap">&#9888;</td></tr>
-</tbody></table>
-  </div>
-  </section>
-
-  <div class="footer">UFO Engine &middot; 2026-08-31 &middot; 22:35<span class="pind" id="pind"></span></div>
-  </div>
-
-<script>
-(function () {
-  var PAGE_MS = 30000;
-  var pages = [].slice.call(document.querySelectorAll('.page'));
-  var ind   = document.getElementById('pind');
-  var wrap  = document.getElementById('fit');
-  var cur   = -1;
-
-  // Shrink to fit rather than scroll. A kiosk TV has no scrollbar and no input
-  // device, so anything past the fold is simply invisible to the shift.
-  function fit() {
-    if (!wrap) return;
-    wrap.style.transform = 'none';
-    var need = wrap.scrollHeight, have = window.innerHeight - 4;
-    if (need > have && need > 0) {
-      wrap.style.transform = 'scale(' + Math.max(0.45, have / need) + ')';
-    }
-  }
-
-  // Phase-locked to the WALL CLOCK, not to page load: kiosk.html re-injects this
-  // document via srcdoc every time the published file changes (the publisher runs
-  // every 30s), which would reset any load-relative timer and could strand the
-  // screen on page 1 forever. Deriving the active page from Date.now() keeps the
-  // cadence continuous across those reloads.
-  function show() {
-    if (!pages.length) return;
-    var i = Math.floor(Date.now() / PAGE_MS) % pages.length;
-    if (i === cur) return;
-    cur = i;
-    for (var k = 0; k < pages.length; k++) {
-      pages[k].className = 'page' + (k === i ? ' pg-on' : '');
-    }
-    if (ind) ind.textContent = (i + 1) + '/' + pages.length;
-    fit();
-  }
-
-  show();
-  setInterval(show, 250);
-  window.addEventListener('resize', fit);
-})();
-</script>
-
+  <div class="footer">UFO Engine &middot; 2026-09-01 &middot; 05:19</div>
 </body>
 </html>
