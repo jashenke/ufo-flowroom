@@ -7,3 +7,5 @@ Live: <https://jashenke.github.io/ufo-flowroom/>
 
 See [`flow-room/README.md`](flow-room/README.md) for screen setup and the reason
 `raw.githubusercontent.com` cannot be used.
+
+<!-- selfheal probe -->
