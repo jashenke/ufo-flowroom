@@ -6,7 +6,12 @@
   <title>UFO &ndash; Engine Monitor</title>
   <style>
     *{box-sizing:border-box;margin:0;padding:0}
-    body{background:#0f172a;color:#e2e8f0;font-family:'Segoe UI',system-ui,sans-serif;padding:20px;min-height:100vh}
+    body{background:#0f172a;color:#e2e8f0;font-family:'Segoe UI',system-ui,sans-serif;padding:20px;height:100vh;overflow:hidden}
+    /* Slide paging + shrink-to-fit -- see _PAGER_JS. */
+    #fit{transform-origin:top left}
+    .page{display:none}
+    .page.pg-on{display:block}
+    .pind{margin-left:8px;color:#475569}
     .header{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px}
     .htitle{display:flex;align-items:center;gap:10px}
     .dot{width:10px;height:10px;border-radius:50%;background:#fbbf24}
@@ -26,7 +31,13 @@
     .cl .no{color:#475569}
     .cl.off .lbl{color:#64748b}
     .cl.on .lbl{color:#e2e8f0}
-    .cl .det{margin-left:auto;font-size:.75rem;color:#34d399cc;font-family:monospace}
+    .cl .unk{color:#fbbf24;font-weight:700}
+    .cl.unk .lbl{color:#cbd5e1}
+    .cl.unk .det{color:#fbbf24cc}
+    /* Clipped, not wrapped: an exception string here must not reflow the card. */
+    .cl .det{margin-left:auto;font-size:.75rem;color:#34d399cc;font-family:monospace;
+             max-width:52%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+    .cl.off .det{color:#94a3b8cc}
     .repcard{background:#1e293b;border-radius:12px;overflow:hidden;margin-bottom:14px}
     .rephdr-row{display:flex;align-items:center;justify-content:space-between;padding:10px 14px;border-bottom:1px solid #334155}
     .repbody{display:grid;grid-template-columns:repeat(3,1fr)}
@@ -38,27 +49,55 @@
     .utag{font-size:.65rem;font-weight:700;color:#94a3b8;text-transform:uppercase}
     .uort{font-size:.85rem;font-weight:600;color:#f1f5f9}
     .dim{font-size:.85rem;color:#64748b}
+    .ctbl{width:100%;border-collapse:collapse;font-size:.85rem}
+    .ctbl th{font-size:.7rem;font-weight:600;color:#94a3b8;text-align:left;
+              padding:6px 12px 6px 0;border-bottom:1px solid #334155}
+    .ctbl td{padding:5px 12px 5px 0;border-bottom:1px solid #334155cc;color:#cbd5e1}
+    .ctbl tr:last-child td{border-bottom:none}
+    .ctbl .num{text-align:right;padding-right:0;padding-left:12px}
+    .ctbl th.num{text-align:right}
+    .ctbl .mono{font-family:monospace;color:#e2e8f0}
+    .ctbl .strong{color:#fff;font-weight:600}
     .footer{margin-top:14px;font-size:.7rem;color:#334155;text-align:right}
+    /* CPT verdict pill + per-row risk tiers, colours matched to the live page. */
+    .vbadge{font-size:.7rem;font-weight:600;padding:2px 7px;border-radius:6px;border:1px solid;margin-left:6px}
+    .v-ok{background:#064e3b4d;border-color:#065f46;color:#4ade80}
+    .v-warn{background:#7c2d124d;border-color:#9a3412;color:#fb923c}
+    .v-crit{background:#7f1d1d4d;border-color:#991b1b;color:#f87171}
+    .v-nocap{background:#78350f4d;border-color:#92400e;color:#fbbf24}
+    /* Scoped under .ctbl on purpose: `.ctbl td` above already sets a colour with
+       specificity (0,1,1), so a bare `.lv-crit` (0,1,0) would lose to it and the
+       Auslastung/Status columns would render plain grey. */
+    .ctbl .lv-ok{color:#4ade80}
+    .ctbl .lv-warn{color:#fb923c}
+    .ctbl .lv-crit{color:#f87171}
+    .ctbl .lv-nocap{color:#fbbf24}
+    .ctbl .lv-none{color:#64748b}
+    .ctbl .faint{color:#64748b}
+    .ctbl .st{font-weight:600;font-size:.78rem}
   </style>
 </head>
 <body>
+  <div id="fit">
   <div class="header">
     <div class="htitle">
       <div class="dot"></div>
       <h1>UFO &ndash; Engine Monitor</h1>
-      <span class="sub">2026-09-02 &middot; 6/28</span>
+      <span class="sub">2026-09-02 &middot; 2/28</span>
     </div>
-    <span class="sub">05:11 Uhr</span>
+    <span class="sub">05:19 Uhr</span>
   </div>
 
+  <!-- Slide 1: the three engine cards + Reporting + OB Uebergabeort. -->
+  <section class="page pg-on">
   <div class="grid3">
     <div class="card">
-      <div class="chdr"><span class="ctitle">Capacity</span><span class="badge b-amber">4/5</span></div>
-      <div class="cl on"><span class="ok">&#10003;</span><span class="lbl">OB Plan: Solve CPT & Forecasted Transfer Out Executed</span></div>
-<div class="cl on"><span class="ok">&#10003;</span><span class="lbl">CPT Solve (0-24h)</span></div>
-<div class="cl on"><span class="ok">&#10003;</span><span class="lbl">Unload Delay (0-48h)</span></div>
-<div class="cl on"><span class="ok">&#10003;</span><span class="lbl">MHC (IB Dock, next 72h)</span></div>
-<div class="cl off"><span class="no">&#10007;</span><span class="lbl">Last Uploaded Plan</span></div>
+      <div class="chdr"><span class="ctitle">Capacity</span><span class="badge b-slate">0/5</span></div>
+      <div class="cl unk"><span class="unk">?</span><span class="lbl">OB Plan: Solve CPT & Forecasted Transfer Out Executed</span><span class="det">Snapshot 01.09 14:01</span></div>
+<div class="cl unk"><span class="unk">?</span><span class="lbl">CPT Solve (0-24h)</span><span class="det">Snapshot 01.09 14:01</span></div>
+<div class="cl unk"><span class="unk">?</span><span class="lbl">Unload Delay (0-48h)</span><span class="det">Snapshot 01.09 14:01</span></div>
+<div class="cl unk"><span class="unk">?</span><span class="lbl">MHC (IB Dock, next 72h)</span><span class="det">Snapshot 01.09 14:01</span></div>
+<div class="cl off"><span class="no">&#10007;</span><span class="lbl">Last Uploaded Plan</span><span class="det">Last: 01.09 14:01</span></div>
 
     </div>
     <div class="card">
@@ -113,7 +152,60 @@
 <div class="ucard"><span class="utag">Fr</span><span class="uort">Stand Up Ship</span></div>
 </div>
   </div>
+  </section>
 
-  <div class="footer">UFO Engine &middot; 2026-09-02 &middot; 05:11</div>
+  <!-- Slide 2: the CPT table on its own -- 12 columns need the full width. -->
+  <section class="page">
+  <div class="card">
+    <div class="chdr"><span class="ctitle">OB CPT Windows</span><span><span class="badge b-slate">Rodeo &middot; next 24h</span></span></div>
+    <div class="dim">Keine offenen CPTs in den n&auml;chsten 24h</div>
+  </div>
+  </section>
+
+  <div class="footer">UFO Engine &middot; 2026-09-02 &middot; 05:19<span class="pind" id="pind"></span></div>
+  </div>
+
+<script>
+(function () {
+  var PAGE_MS = 30000;
+  var pages = [].slice.call(document.querySelectorAll('.page'));
+  var ind   = document.getElementById('pind');
+  var wrap  = document.getElementById('fit');
+  var cur   = -1;
+
+  // Shrink to fit rather than scroll. A kiosk TV has no scrollbar and no input
+  // device, so anything past the fold is simply invisible to the shift.
+  function fit() {
+    if (!wrap) return;
+    wrap.style.transform = 'none';
+    var need = wrap.scrollHeight, have = window.innerHeight - 4;
+    if (need > have && need > 0) {
+      wrap.style.transform = 'scale(' + Math.max(0.45, have / need) + ')';
+    }
+  }
+
+  // Phase-locked to the WALL CLOCK, not to page load: kiosk.html re-injects this
+  // document via srcdoc every time the published file changes (the publisher runs
+  // every 30s), which would reset any load-relative timer and could strand the
+  // screen on page 1 forever. Deriving the active page from Date.now() keeps the
+  // cadence continuous across those reloads.
+  function show() {
+    if (!pages.length) return;
+    var i = Math.floor(Date.now() / PAGE_MS) % pages.length;
+    if (i === cur) return;
+    cur = i;
+    for (var k = 0; k < pages.length; k++) {
+      pages[k].className = 'page' + (k === i ? ' pg-on' : '');
+    }
+    if (ind) ind.textContent = (i + 1) + '/' + pages.length;
+    fit();
+  }
+
+  show();
+  setInterval(show, 250);
+  window.addEventListener('resize', fit);
+})();
+</script>
+
 </body>
 </html>
