@@ -85,7 +85,7 @@
       <h1>UFO &ndash; Engine Monitor</h1>
       <span class="sub">2026-09-07 &middot; 10/31</span>
     </div>
-    <span class="sub">11:57 Uhr</span>
+    <span class="sub">11:58 Uhr</span>
   </div>
 
   <!-- Slide 1: the three engine cards + Reporting + OB Uebergabeort. -->
@@ -94,7 +94,7 @@
     <div class="card">
       <div class="chdr"><span class="ctitle">Capacity</span><span class="badge b-amber">4/5</span></div>
       <div class="cl on"><span class="ok">&#10003;</span><span class="lbl">OB Plan: Solve CPT & Forecasted Transfer Out Executed</span></div>
-<div class="cl off"><span class="no">&#10007;</span><span class="lbl">CPT Solve (0-24h)</span></div>
+<div class="cl unk"><span class="unk">?</span><span class="lbl">CPT Solve (0-24h)</span><span class="det">live: keine CPT-Daten</span></div>
 <div class="cl on"><span class="ok">&#10003;</span><span class="lbl">Unload Delay (0-48h)</span></div>
 <div class="cl on"><span class="ok">&#10003;</span><span class="lbl">MHC (IB Dock, next 72h)</span></div>
 <div class="cl on"><span class="ok">&#10003;</span><span class="lbl">Last Uploaded Plan</span><span class="det">07.09 11:22</span></div>
@@ -160,12 +160,22 @@
   <!-- Slide 2: the CPT table on its own -- 12 columns need the full width. -->
   <section class="page">
   <div class="card">
-    <div class="chdr"><span class="ctitle">OB CPT Windows</span><span><span class="badge b-slate">Rodeo &middot; next 24h</span><span class="sub" style="margin-left:6px">3750.4m old</span></span></div>
-    <div class="dim">Keine offenen CPTs in den n&auml;chsten 24h</div>
+    <div class="chdr"><span class="ctitle">OB CPT Windows</span><span><span class="badge b-slate">Rodeo &middot; next 24h</span><span class="sub" style="margin-left:6px">0.4m old</span><span class="vbadge v-nocap">keine nutzbare Cap</span></span></div>
+    <table class="ctbl"><thead><tr><th>CPT</th><th class="num">Std.</th><th class="num">Units due</th><th class="num">Ready to Pick</th><th class="num">Not Yet Picked</th><th class="num">Picked</th><th class="num">Palletized</th><th class="num">Cum. Units Due</th><th class="num">Cum. Demand</th><th class="num">Capacity</th><th class="num">Auslastung</th><th class="num">Status</th></tr></thead><tbody><tr><td class="mono">CPT Sep 07 17:00</td><td class="num">5.0h</td><td class="num strong">1.827</td><td class="num">0</td><td class="num">0</td><td class="num">10</td><td class="num">1.817</td><td class="num faint">1.827</td><td class="num strong">0</td><td class="num"><span class="lv-nocap">keine nutzbare Cap</span></td><td class="num lv-nocap">--</td><td class="num st lv-nocap">&#9888;</td></tr>
+<tr><td class="mono">CPT Sep 07 18:15</td><td class="num">6.3h</td><td class="num strong">1.045</td><td class="num">0</td><td class="num">0</td><td class="num">150</td><td class="num">895</td><td class="num faint">2.872</td><td class="num strong">0</td><td class="num"><span class="lv-nocap">keine nutzbare Cap</span></td><td class="num lv-nocap">--</td><td class="num st lv-nocap">&#9888;</td></tr>
+<tr><td class="mono">CPT Sep 07 20:45</td><td class="num">8.8h</td><td class="num strong">26.726</td><td class="num">2</td><td class="num">851</td><td class="num">4.383</td><td class="num">21.490</td><td class="num faint">29.598</td><td class="num strong">853</td><td class="num"><span class="lv-nocap">keine nutzbare Cap</span></td><td class="num lv-nocap">--</td><td class="num st lv-nocap">&#9888;</td></tr>
+<tr><td class="mono">CPT Sep 07 21:30</td><td class="num">9.5h</td><td class="num strong">12.996</td><td class="num">10</td><td class="num">10.027</td><td class="num">2.308</td><td class="num">651</td><td class="num faint">42.594</td><td class="num strong">10.890</td><td class="num"><span class="lv-nocap">keine nutzbare Cap</span></td><td class="num lv-nocap">--</td><td class="num st lv-nocap">&#9888;</td></tr>
+<tr><td class="mono">CPT Sep 07 23:30</td><td class="num">11.5h</td><td class="num strong">4.606</td><td class="num">4</td><td class="num">4.578</td><td class="num">0</td><td class="num">24</td><td class="num faint">47.200</td><td class="num strong">15.472</td><td class="num"><span class="lv-nocap">keine nutzbare Cap</span></td><td class="num lv-nocap">--</td><td class="num st lv-nocap">&#9888;</td></tr>
+<tr><td class="mono">CPT Sep 07 23:45</td><td class="num">11.8h</td><td class="num strong">26.756</td><td class="num">179</td><td class="num">25.213</td><td class="num">626</td><td class="num">738</td><td class="num faint">73.956</td><td class="num strong">40.864</td><td class="num"><span class="lv-nocap">keine nutzbare Cap</span></td><td class="num lv-nocap">--</td><td class="num st lv-nocap">&#9888;</td></tr>
+<tr><td class="mono">CPT Sep 08 00:30</td><td class="num">12.5h</td><td class="num strong">2.060</td><td class="num">6</td><td class="num">1.954</td><td class="num">59</td><td class="num">41</td><td class="num faint">76.016</td><td class="num strong">42.824</td><td class="num"><span class="lv-nocap">keine nutzbare Cap</span></td><td class="num lv-nocap">--</td><td class="num st lv-nocap">&#9888;</td></tr>
+<tr><td class="mono">CPT Sep 08 01:30</td><td class="num">13.5h</td><td class="num strong">10.488</td><td class="num">32</td><td class="num">10.145</td><td class="num">45</td><td class="num">266</td><td class="num faint">86.504</td><td class="num strong">53.001</td><td class="num"><span class="lv-nocap">keine nutzbare Cap</span></td><td class="num lv-nocap">--</td><td class="num st lv-nocap">&#9888;</td></tr>
+<tr><td class="mono">CPT Sep 08 04:00</td><td class="num">16.0h</td><td class="num strong">5.011</td><td class="num">37</td><td class="num">4.935</td><td class="num">8</td><td class="num">31</td><td class="num faint">91.515</td><td class="num strong">57.973</td><td class="num"><span class="lv-nocap">keine nutzbare Cap</span></td><td class="num lv-nocap">--</td><td class="num st lv-nocap">&#9888;</td></tr>
+<tr><td class="mono">CPT Sep 08 04:15</td><td class="num">16.3h</td><td class="num strong">1.681</td><td class="num">7</td><td class="num">1.671</td><td class="num">0</td><td class="num">3</td><td class="num faint">93.196</td><td class="num strong">59.651</td><td class="num"><span class="lv-nocap">keine nutzbare Cap</span></td><td class="num lv-nocap">--</td><td class="num st lv-nocap">&#9888;</td></tr>
+</tbody></table>
   </div>
   </section>
 
-  <div class="footer">UFO Engine &middot; 2026-09-07 &middot; 11:57<span class="pind" id="pind"></span></div>
+  <div class="footer">UFO Engine &middot; 2026-09-07 &middot; 11:58<span class="pind" id="pind"></span></div>
   </div>
 
 <script>
