@@ -83,20 +83,20 @@
     <div class="htitle">
       <div class="dot"></div>
       <h1>UFO &ndash; Engine Monitor</h1>
-      <span class="sub">2026-09-14 &middot; 13/31</span>
+      <span class="sub">2026-09-14 &middot; 12/31</span>
     </div>
-    <span class="sub">12:51 Uhr</span>
+    <span class="sub">12:52 Uhr</span>
   </div>
 
   <!-- Slide 1: the three engine cards + Reporting + OB Uebergabeort. -->
   <section class="page pg-on">
   <div class="grid3">
     <div class="card">
-      <div class="chdr"><span class="ctitle">Capacity</span><span class="badge b-green">5/5</span></div>
-      <div class="cl on"><span class="ok">&#10003;</span><span class="lbl">OB Plan: Solve CPT & Forecasted Transfer Out Executed</span><span class="det">Run 11:28 | Target 126,263 units (incl. FRACS) over 38.0h | planned capacity 174,169 units (138% of target). IB staffed for max performance (no hard BL gate).</span></div>
-<div class="cl on"><span class="ok">&#10003;</span><span class="lbl">CPT Solve (0-24h)</span><span class="det">Run 11:28 | All CPTs under 85% utilization (incl. pick deadline buffer)</span></div>
-<div class="cl on"><span class="ok">&#10003;</span><span class="lbl">Unload Delay (0-48h)</span><span class="det">Run 11:28 | 12 trucks across 0-48h within capacity (16,320 u/day at 85% risk)</span></div>
-<div class="cl on"><span class="ok">&#10003;</span><span class="lbl">MHC (IB Dock, next 72h)</span><span class="det">Run 11:28 | 0 pallets vs MHC 800 (simulation)</span></div>
+      <div class="chdr"><span class="ctitle">Capacity</span><span class="badge b-amber">4/5</span></div>
+      <div class="cl on"><span class="ok">&#10003;</span><span class="lbl">OB Plan: Solve CPT & Forecasted Transfer Out Executed</span><span class="det">live: Ziel 126.265 u vs Cap 145.606 u (115%)</span></div>
+<div class="cl off"><span class="no">&#10007;</span><span class="lbl">CPT Solve (0-24h)</span><span class="det">live: 9 CPTs, Risiko (>95%)</span></div>
+<div class="cl on"><span class="ok">&#10003;</span><span class="lbl">Unload Delay (0-48h)</span><span class="det">Run 08:22 | 14 trucks across 0-48h within capacity (16,320 u/day at 85% risk)</span></div>
+<div class="cl on"><span class="ok">&#10003;</span><span class="lbl">MHC (IB Dock, next 72h)</span><span class="det">Run 08:22 | 0 pallets vs MHC 800 (simulation)</span></div>
 <div class="cl on"><span class="ok">&#10003;</span><span class="lbl">Last Uploaded Plan</span><span class="det">14.09 11:28</span></div>
 
     </div>
@@ -160,12 +160,21 @@
   <!-- Slide 2: the CPT table on its own -- 12 columns need the full width. -->
   <section class="page">
   <div class="card">
-    <div class="chdr"><span class="ctitle">OB CPT Windows</span><span><span class="badge b-slate">Rodeo &middot; next 24h</span><span class="sub" style="margin-left:6px">3804.9m old</span></span></div>
-    <div class="dim">Keine offenen CPTs in den n&auml;chsten 24h</div>
+    <div class="chdr"><span class="ctitle">OB CPT Windows</span><span><span class="badge b-slate">Rodeo &middot; next 24h</span><span class="sub" style="margin-left:6px">62.2m old</span><span class="vbadge v-crit">CPT-Risiko (&gt;95%)</span></span></div>
+    <table class="ctbl"><thead><tr><th>CPT</th><th class="num">Std.</th><th class="num">Units due</th><th class="num">ReadyToPick</th><th class="num">Pickable</th><th class="num">Picked</th><th class="num">Palletized</th><th class="num">Cum. Units Due</th><th class="num">Cum. Demand</th><th class="num">Capacity</th><th class="num">Auslastung</th><th class="num">Status</th></tr></thead><tbody><tr><td class="mono">CPT Sep 14 17:00</td><td class="num">4.1h</td><td class="num strong">4.097</td><td class="num">0</td><td class="num">0</td><td class="num">84</td><td class="num">4.013</td><td class="num faint">4.097</td><td class="num strong">0</td><td class="num">14.123</td><td class="num lv-ok">0%</td><td class="num st lv-ok">&#10003;</td></tr>
+<tr><td class="mono">CPT Sep 14 18:15</td><td class="num">5.4h</td><td class="num strong">5.748</td><td class="num">4</td><td class="num">0</td><td class="num">266</td><td class="num">5.478</td><td class="num faint">9.845</td><td class="num strong">4</td><td class="num">18.962</td><td class="num lv-ok">0%</td><td class="num st lv-ok">&#10003;</td></tr>
+<tr><td class="mono">CPT Sep 14 20:45</td><td class="num">7.9h</td><td class="num strong">22.742</td><td class="num">26</td><td class="num">4.381</td><td class="num">3.526</td><td class="num">14.809</td><td class="num faint">32.587</td><td class="num strong">4.411</td><td class="num">26.704</td><td class="num lv-ok">17%</td><td class="num st lv-ok">&#10003;</td></tr>
+<tr><td class="mono">CPT Sep 14 21:30</td><td class="num">8.6h</td><td class="num strong">8.315</td><td class="num">0</td><td class="num">1.419</td><td class="num">1.332</td><td class="num">5.564</td><td class="num faint">40.902</td><td class="num strong">5.830</td><td class="num">29.607</td><td class="num lv-ok">20%</td><td class="num st lv-ok">&#10003;</td></tr>
+<tr><td class="mono">CPT Sep 14 23:45</td><td class="num">10.9h</td><td class="num strong">43.573</td><td class="num">167</td><td class="num">39.138</td><td class="num">1.494</td><td class="num">2.774</td><td class="num faint">84.475</td><td class="num strong">45.135</td><td class="num">41.343</td><td class="num lv-crit">109%</td><td class="num st lv-crit">&#10007;</td></tr>
+<tr><td class="mono">CPT Sep 15 00:30</td><td class="num">11.6h</td><td class="num strong">1.457</td><td class="num">0</td><td class="num">1.391</td><td class="num">49</td><td class="num">17</td><td class="num faint">85.932</td><td class="num strong">46.526</td><td class="num">47.272</td><td class="num lv-crit">98%</td><td class="num st lv-crit">&#10007;</td></tr>
+<tr><td class="mono">CPT Sep 15 01:30</td><td class="num">12.6h</td><td class="num strong">5.223</td><td class="num">0</td><td class="num">5.146</td><td class="num">8</td><td class="num">69</td><td class="num faint">91.155</td><td class="num strong">51.672</td><td class="num">55.178</td><td class="num lv-warn">94%</td><td class="num st lv-warn">&#9888;</td></tr>
+<tr><td class="mono">CPT Sep 15 04:00</td><td class="num">15.1h</td><td class="num strong">3.822</td><td class="num">37</td><td class="num">3.775</td><td class="num">6</td><td class="num">4</td><td class="num faint">94.977</td><td class="num strong">55.484</td><td class="num">70.989</td><td class="num lv-ok">78%</td><td class="num st lv-ok">&#10003;</td></tr>
+<tr><td class="mono">CPT Sep 15 04:15</td><td class="num">15.4h</td><td class="num strong">1.692</td><td class="num">60</td><td class="num">1.629</td><td class="num">3</td><td class="num">0</td><td class="num faint">96.669</td><td class="num strong">57.173</td><td class="num">72.965</td><td class="num lv-ok">78%</td><td class="num st lv-ok">&#10003;</td></tr>
+</tbody></table>
   </div>
   </section>
 
-  <div class="footer">UFO Engine &middot; 2026-09-14 &middot; 12:51<span class="pind" id="pind"></span></div>
+  <div class="footer">UFO Engine &middot; 2026-09-14 &middot; 12:52<span class="pind" id="pind"></span></div>
   </div>
 
 <script>
