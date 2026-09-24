@@ -83,7 +83,7 @@
     <div class="htitle">
       <div class="dot"></div>
       <h1>UFO &ndash; Engine Monitor</h1>
-      <span class="sub">2026-09-24 &middot; 13/31</span>
+      <span class="sub">2026-09-24 &middot; 14/31</span>
     </div>
     <span class="sub">08:48 Uhr</span>
   </div>
@@ -92,11 +92,11 @@
   <section class="page pg-on">
   <div class="grid3">
     <div class="card">
-      <div class="chdr"><span class="ctitle">Capacity</span><span class="badge b-amber">3/5</span></div>
-      <div class="cl on"><span class="ok">&#10003;</span><span class="lbl">OB Plan: Solve CPT & Forecasted Transfer Out Executed</span></div>
-<div class="cl unk"><span class="unk">?</span><span class="lbl">CPT Solve (0-24h)</span><span class="det">live: keine CPT-Daten</span></div>
-<div class="cl off"><span class="no">&#10007;</span><span class="lbl">Unload Delay (0-48h)</span></div>
-<div class="cl on"><span class="ok">&#10003;</span><span class="lbl">MHC (IB Dock, next 72h)</span></div>
+      <div class="chdr"><span class="ctitle">Capacity</span><span class="badge b-amber">4/5</span></div>
+      <div class="cl on"><span class="ok">&#10003;</span><span class="lbl">OB Plan: Solve CPT & Forecasted Transfer Out Executed</span><span class="det">live: Ziel 133.519 u vs Cap 175.564 u (131%)</span></div>
+<div class="cl on"><span class="ok">&#10003;</span><span class="lbl">CPT Solve (0-24h)</span><span class="det">live: 6 CPTs machbar</span></div>
+<div class="cl off"><span class="no">&#10007;</span><span class="lbl">Unload Delay (0-48h)</span><span class="det">Run 08:11 | 24-48h: 36 trucks (26,136 u > 16,320 cap)</span></div>
+<div class="cl on"><span class="ok">&#10003;</span><span class="lbl">MHC (IB Dock, next 72h)</span><span class="det">Run 08:11 | 0 pallets vs MHC 800 (simulation)</span></div>
 <div class="cl on"><span class="ok">&#10003;</span><span class="lbl">Last Uploaded Plan</span><span class="det">24.09 04:37</span></div>
 
     </div>
@@ -160,12 +160,13 @@
   <!-- Slide 2: the CPT table on its own -- 12 columns need the full width. -->
   <section class="page">
   <div class="card">
-    <div class="chdr"><span class="ctitle">OB CPT Windows</span><span><span class="badge b-slate">Rodeo &middot; next 24h</span><span class="sub" style="margin-left:6px">1349.9m old</span><span class="vbadge v-nocap">keine nutzbare Cap</span></span></div>
-    <table class="ctbl"><thead><tr><th>CPT</th><th class="num">Std.</th><th class="num">Units due</th><th class="num">ReadyToPick</th><th class="num">Pickable</th><th class="num">Picked</th><th class="num">Palletized</th><th class="num">Cum. Units Due</th><th class="num">Cum. Demand</th><th class="num">Capacity</th><th class="num">Auslastung</th><th class="num">Status</th></tr></thead><tbody><tr><td class="mono">CPT Sep 24 17:00</td><td class="num">8.2h</td><td class="num strong">260</td><td class="num">260</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num faint">260</td><td class="num strong">--</td><td class="num"><span class="lv-nocap">keine nutzbare Cap</span></td><td class="num lv-nocap">--</td><td class="num st lv-nocap">&#9888;</td></tr>
-<tr><td class="mono">CPT Sep 24 18:15</td><td class="num">9.4h</td><td class="num strong">5.287</td><td class="num">5.160</td><td class="num">127</td><td class="num">0</td><td class="num">0</td><td class="num faint">5.547</td><td class="num strong">--</td><td class="num"><span class="lv-nocap">keine nutzbare Cap</span></td><td class="num lv-nocap">--</td><td class="num st lv-nocap">&#9888;</td></tr>
-<tr><td class="mono">CPT Sep 24 20:45</td><td class="num">11.9h</td><td class="num strong">12.644</td><td class="num">12.117</td><td class="num">527</td><td class="num">0</td><td class="num">0</td><td class="num faint">18.191</td><td class="num strong">--</td><td class="num"><span class="lv-nocap">keine nutzbare Cap</span></td><td class="num lv-nocap">--</td><td class="num st lv-nocap">&#9888;</td></tr>
-<tr><td class="mono">CPT Sep 24 21:30</td><td class="num">12.7h</td><td class="num strong">5.909</td><td class="num">5.691</td><td class="num">218</td><td class="num">0</td><td class="num">0</td><td class="num faint">24.100</td><td class="num strong">--</td><td class="num"><span class="lv-nocap">keine nutzbare Cap</span></td><td class="num lv-nocap">--</td><td class="num st lv-nocap">&#9888;</td></tr>
-<tr><td class="mono">CPT Sep 24 23:45</td><td class="num">14.9h</td><td class="num strong">5.290</td><td class="num">5.154</td><td class="num">135</td><td class="num">1</td><td class="num">0</td><td class="num faint">29.390</td><td class="num strong">--</td><td class="num"><span class="lv-nocap">keine nutzbare Cap</span></td><td class="num lv-nocap">--</td><td class="num st lv-nocap">&#9888;</td></tr>
+    <div class="chdr"><span class="ctitle">OB CPT Windows</span><span><span class="badge b-slate">Rodeo &middot; next 24h</span><span class="sub" style="margin-left:6px">5.4m old</span><span class="vbadge v-ok">alle CPTs machbar</span></span></div>
+    <table class="ctbl"><thead><tr><th>CPT</th><th class="num">Std.</th><th class="num">Units due</th><th class="num">ReadyToPick</th><th class="num">Pickable</th><th class="num">Picked</th><th class="num">Palletized</th><th class="num">Cum. Units Due</th><th class="num">Cum. Demand</th><th class="num">Capacity</th><th class="num">Auslastung</th><th class="num">Status</th></tr></thead><tbody><tr><td class="mono">CPT Sep 24 17:00</td><td class="num">8.2h</td><td class="num strong">260</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">260</td><td class="num faint">260</td><td class="num strong">0</td><td class="num">21.959</td><td class="num lv-ok">0%</td><td class="num st lv-ok">&#10003;</td></tr>
+<tr><td class="mono">CPT Sep 24 18:15</td><td class="num">9.4h</td><td class="num strong">5.165</td><td class="num">0</td><td class="num">6</td><td class="num">93</td><td class="num">5.066</td><td class="num faint">5.425</td><td class="num strong">6</td><td class="num">26.751</td><td class="num lv-ok">0%</td><td class="num st lv-ok">&#10003;</td></tr>
+<tr><td class="mono">CPT Sep 24 20:45</td><td class="num">11.9h</td><td class="num strong">12.117</td><td class="num">0</td><td class="num">1.115</td><td class="num">332</td><td class="num">10.670</td><td class="num faint">17.542</td><td class="num strong">1.121</td><td class="num">34.419</td><td class="num lv-ok">3%</td><td class="num st lv-ok">&#10003;</td></tr>
+<tr><td class="mono">CPT Sep 24 21:30</td><td class="num">12.7h</td><td class="num strong">5.640</td><td class="num">60</td><td class="num">3.148</td><td class="num">1.043</td><td class="num">1.389</td><td class="num faint">23.182</td><td class="num strong">4.329</td><td class="num">37.294</td><td class="num lv-ok">12%</td><td class="num st lv-ok">&#10003;</td></tr>
+<tr><td class="mono">CPT Sep 24 23:45</td><td class="num">14.9h</td><td class="num strong">5.164</td><td class="num">12</td><td class="num">4.424</td><td class="num">353</td><td class="num">375</td><td class="num faint">28.346</td><td class="num strong">8.765</td><td class="num">46.803</td><td class="num lv-ok">19%</td><td class="num st lv-ok">&#10003;</td></tr>
+<tr><td class="mono">CPT Sep 25 04:15</td><td class="num">19.4h</td><td class="num strong">21.481</td><td class="num">15.414</td><td class="num">5.601</td><td class="num">466</td><td class="num">0</td><td class="num faint">49.827</td><td class="num strong">29.780</td><td class="num">66.859</td><td class="num lv-ok">45%</td><td class="num st lv-ok">&#10003;</td></tr>
 </tbody></table>
   </div>
   </section>
