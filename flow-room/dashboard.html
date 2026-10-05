@@ -153,14 +153,19 @@
 
   <div class="card">
     <div class="chdr"><span class="ctitle">OB &Uuml;bergabeort</span><span class="badge b-slate">KW 41 · 2026</span></div>
-    <div class="dim">Keine Datei f&uuml;r KW 41 (OB_Uebergabeort_KW41_2026.json)</div>
+    <div class="ugrid"><div class="ucard"><span class="utag">Mo</span><span class="uort">Stand Up Pick</span></div>
+<div class="ucard"><span class="utag">Di</span><span class="uort">Stand Up Sort</span></div>
+<div class="ucard"><span class="utag">Mi</span><span class="uort">Notfallkonzept H3</span></div>
+<div class="ucard"><span class="utag">Do</span><span class="uort">Stand Up Ship</span></div>
+<div class="ucard"><span class="utag">Fr</span><span class="uort">Ladestationen PUP</span></div>
+</div>
   </div>
   </section>
 
   <!-- Slide 2: the CPT table on its own -- 12 columns need the full width. -->
   <section class="page">
   <div class="card">
-    <div class="chdr"><span class="ctitle">OB CPT Windows</span><span><span class="badge b-slate">Rodeo &middot; next 24h</span><span class="sub" style="margin-left:6px">4.4m old</span><span class="vbadge v-nocap">keine nutzbare Cap</span></span></div>
+    <div class="chdr"><span class="ctitle">OB CPT Windows</span><span><span class="badge b-slate">Rodeo &middot; next 24h</span><span class="sub" style="margin-left:6px">5.1m old</span><span class="vbadge v-nocap">keine nutzbare Cap</span></span></div>
     <table class="ctbl"><thead><tr><th>CPT</th><th class="num">Hours ahead</th><th class="num">Units due</th><th class="num" title="Canonical OB state: picked up by the pick chain but not yet released to a picker.">ReadyToPick</th><th class="num" title="Canonical OB state (Rodeo: PickingNotYetPicked + CrossdockNotYetPicked): released, waiting for pick labour.">Pickable</th><th class="num">Picked</th><th class="num">Palletized</th><th class="num" title="Running total of Units due across every CPT from now through this one (includes volume already Picked/Palletized -- informational volume commitment, not a risk signal)">Cum. Units Due</th><th class="num" title="Running total of Pickable + ReadyToPick across every CPT from now through this one -- this is the number Status actually checks against Capacity.">Cum. Demand</th><th class="num" title="Tats&auml;chlich planbare Pick-Kapazit&auml;t von jetzt bis 0,5h vor diesem CPT (voller Wert, NICHT um den Risikofaktor gek&uuml;rzt).">Capacity</th><th class="num" title="Cum. Demand / Capacity. &Uuml;ber 85% = orange (Risikopuffer aufgebraucht), &uuml;ber 95% = rot">Auslastung</th><th class="num">Status</th><th class="num" title="Ben&ouml;tigter Pick-TPH f&uuml;r diesen CPT (Pickable &divide; verf&uuml;gbare Zeit bis SLA). Ampel vs. live TPH Transfer Out Pick.">Pick Risiko</th></tr></thead><tbody><tr><td class="mono">CPT Oct 05 17:00</td><td class="num">4.4h</td><td class="num strong">1.179</td><td class="num">0</td><td class="num">0</td><td class="num">13</td><td class="num">1.166</td><td class="num faint">1.179</td><td class="num strong">0</td><td class="num"><span class="lv-nocap">keine nutzbare Cap</span></td><td class="num lv-nocap">--</td><td class="num st lv-nocap">&#9888;</td><td class="num st lv-ok" title="Ben&ouml;tigt: 0 u/h | Aktuell: 0 u/h (Transfer Out Pick)">&#10003; 0</td></tr>
 <tr><td class="mono">CPT Oct 05 18:15</td><td class="num">5.6h</td><td class="num strong">13.389</td><td class="num">184</td><td class="num">155</td><td class="num">754</td><td class="num">12.296</td><td class="num faint">14.568</td><td class="num strong">339</td><td class="num"><span class="lv-nocap">keine nutzbare Cap</span></td><td class="num lv-nocap">--</td><td class="num st lv-nocap">&#9888;</td><td class="num st lv-none" title="Kein live Pick-TPH verf&uuml;gbar">--</td></tr>
 <tr><td class="mono">CPT Oct 05 20:45</td><td class="num">8.1h</td><td class="num strong">21.765</td><td class="num">25</td><td class="num">5.920</td><td class="num">2.857</td><td class="num">12.963</td><td class="num faint">36.333</td><td class="num strong">6.284</td><td class="num"><span class="lv-nocap">keine nutzbare Cap</span></td><td class="num lv-nocap">--</td><td class="num st lv-nocap">&#9888;</td><td class="num st lv-none" title="Kein live Pick-TPH verf&uuml;gbar">--</td></tr>
