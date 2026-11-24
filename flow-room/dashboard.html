@@ -87,11 +87,6 @@
     .ctbl .lv-none{color:#64748b}
     .ctbl .faint{color:#64748b}
     .ctbl .st{font-weight:600;font-size:.78rem}
-    /* Start-meeting slide: the mailed Shiftwash, two columns, enlarged for the
-       TV (the mail is sized for a phone); fit() shrinks it again if too tall. */
-    .swhdr{display:flex;align-items:baseline;gap:12px;margin-bottom:10px}
-    .swgrid{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,2fr);gap:14px;align-items:start}
-    .swz{zoom:1.35}
   </style>
 </head>
 <body>
@@ -114,10 +109,10 @@
   <div class="grid3">
     <div class="card">
       <div class="chdr"><span class="ctitle">Capacity</span><span class="badge b-green">5/5</span></div>
-      <div class="cl on"><span class="ok">&#10003;</span><span class="lbl">OB Plan: Solve CPT & Forecasted Transfer Out Executed</span><span class="det" title="Run 15:09 | Target 202,533 units (incl. FRACS) over 53.6h | planned capacity 504,999 units (249% of target). IB staffed for max performance (no hard BL gate).">cap 504.999 vs goal 202.533 u</span><span class="age">6m old</span></div>
-<div class="cl on"><span class="ok">&#10003;</span><span class="lbl">CPT Solve (0-24h)</span><span class="det" title="live: 10 CPTs machbar">peak 18% vs max 85%</span><span class="age">5m old</span></div>
-<div class="cl on"><span class="ok">&#10003;</span><span class="lbl">Unload Delay (0-48h)</span><span class="det" title="Run 15:09 | 0-24h: peak 4 trucks/h (phase IV) vs dock 8/h; 24-48h: peak 6 trucks/h (phase IV) vs dock 8/h">peak 6 vs max 8 trucks/h</span><span class="age">6m old</span></div>
-<div class="cl on"><span class="ok">&#10003;</span><span class="lbl">MHC (IB Dock, next 72h)</span><span class="det" title="Run 15:09 | 250 pallets vs MHC 1,114 (simulation)">peak 250 vs max 1.114 pal</span><span class="age">6m old</span></div>
+      <div class="cl on"><span class="ok">&#10003;</span><span class="lbl">OB Plan: Solve CPT & Forecasted Transfer Out Executed</span><span class="det" title="Run 13:16 | Target 207,594 units (incl. FRACS) over 55.5h | planned capacity 658,544 units (317% of target). IB staffed for max performance (no hard BL gate).">cap 658.544 vs goal 207.594 u</span><span class="age">1h 59m old</span></div>
+<div class="cl on"><span class="ok">&#10003;</span><span class="lbl">CPT Solve (0-24h)</span><span class="det" title="live: 10 CPTs machbar">peak 17% vs max 85%</span><span class="age">5m old</span></div>
+<div class="cl on"><span class="ok">&#10003;</span><span class="lbl">Unload Delay (0-48h)</span><span class="det" title="Run 13:16 | 0-24h: peak 4 trucks/h (phase IV) vs dock 8/h; 24-48h: peak 6 trucks/h (phase IV) vs dock 8/h">peak 6 vs max 8 trucks/h</span><span class="age">1h 59m old</span></div>
+<div class="cl on"><span class="ok">&#10003;</span><span class="lbl">MHC (IB Dock, next 72h)</span><span class="det" title="Run 13:16 | 318 pallets vs MHC 800 (simulation)">peak 318 vs max 800 pal</span><span class="age">1h 59m old</span></div>
 <div class="cl on"><span class="ok">&#10003;</span><span class="lbl">Last Uploaded Plan</span><span class="det">24.11 12:59</span><span class="age">2h 16m old</span></div>
 
     </div>
@@ -181,38 +176,31 @@
   <!-- Slide 2: the CPT table on its own -- 12 columns need the full width. -->
   <section class="page">
   <div class="card">
-    <div class="chdr"><span class="ctitle">OB CPT Windows</span><span><span class="badge b-slate">Rodeo &middot; next 24h</span><span class="sub" style="margin-left:6px">5.5m old</span><span class="vbadge v-ok">alle CPTs machbar</span></span></div>
-    <table class="ctbl"><thead><tr><th>CPT</th><th class="num">Hours ahead</th><th class="num">Units due</th><th class="num" title="Canonical OB state: picked up by the pick chain but not yet released to a picker.">ReadyToPick</th><th class="num" title="Canonical OB state (Rodeo: PickingNotYetPicked + CrossdockNotYetPicked): released, waiting for pick labour.">Pickable</th><th class="num">Picked</th><th class="num">Palletized</th><th class="num" title="Running total of Units due across every CPT from now through this one (includes volume already Picked/Palletized -- informational volume commitment, not a risk signal)">Cum. Units Due</th><th class="num" title="Running total of Pickable + ReadyToPick across every CPT from now through this one -- this is the number Status actually checks against Capacity.">Cum. Demand</th><th class="num" title="Tats&auml;chlich planbare Pick-Kapazit&auml;t von jetzt bis 0,5h vor diesem CPT (voller Wert, NICHT um den Risikofaktor gek&uuml;rzt).">Capacity</th><th class="num" title="Cum. Demand / Capacity. &Uuml;ber 85% = orange (Risikopuffer aufgebraucht), &uuml;ber 95% = rot">Auslastung</th><th class="num">Status</th></tr></thead><tbody><tr><td class="mono">CPT Nov 24 17:00</td><td class="num">1.8h</td><td class="num strong">1.228</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">1.228</td><td class="num faint">1.228</td><td class="num strong">0</td><td class="num">12.903</td><td class="num lv-ok">0%</td><td class="num st lv-ok">&#10003;</td></tr>
-<tr><td class="mono">CPT Nov 24 18:15</td><td class="num">3.0h</td><td class="num strong">20.655</td><td class="num">724</td><td class="num">47</td><td class="num">555</td><td class="num">19.329</td><td class="num faint">21.883</td><td class="num strong">771</td><td class="num">25.806</td><td class="num lv-ok">3%</td><td class="num st lv-ok">&#10003;</td></tr>
-<tr><td class="mono">CPT Nov 24 20:45</td><td class="num">5.5h</td><td class="num strong">20.675</td><td class="num">522</td><td class="num">2.133</td><td class="num">369</td><td class="num">17.651</td><td class="num faint">42.558</td><td class="num strong">3.426</td><td class="num">46.452</td><td class="num lv-ok">7%</td><td class="num st lv-ok">&#10003;</td></tr>
-<tr><td class="mono">CPT Nov 24 21:30</td><td class="num">6.2h</td><td class="num strong">2.476</td><td class="num">215</td><td class="num">955</td><td class="num">211</td><td class="num">1.095</td><td class="num faint">45.034</td><td class="num strong">4.596</td><td class="num">54.194</td><td class="num lv-ok">8%</td><td class="num st lv-ok">&#10003;</td></tr>
-<tr><td class="mono">CPT Nov 24 23:45</td><td class="num">8.5h</td><td class="num strong">13.730</td><td class="num">631</td><td class="num">3.245</td><td class="num">427</td><td class="num">9.427</td><td class="num faint">58.764</td><td class="num strong">8.472</td><td class="num">75.890</td><td class="num lv-ok">11%</td><td class="num st lv-ok">&#10003;</td></tr>
-<tr><td class="mono">CPT Nov 25 00:30</td><td class="num">9.2h</td><td class="num strong">602</td><td class="num">0</td><td class="num">18</td><td class="num">6</td><td class="num">578</td><td class="num faint">59.366</td><td class="num strong">8.490</td><td class="num">82.108</td><td class="num lv-ok">10%</td><td class="num st lv-ok">&#10003;</td></tr>
-<tr><td class="mono">CPT Nov 25 01:30</td><td class="num">10.2h</td><td class="num strong">7.404</td><td class="num">53</td><td class="num">1.770</td><td class="num">193</td><td class="num">5.388</td><td class="num faint">66.770</td><td class="num strong">10.313</td><td class="num">90.400</td><td class="num lv-ok">11%</td><td class="num st lv-ok">&#10003;</td></tr>
-<tr><td class="mono">CPT Nov 25 04:00</td><td class="num">12.8h</td><td class="num strong">24.470</td><td class="num">551</td><td class="num">5.672</td><td class="num">2.033</td><td class="num">16.214</td><td class="num faint">91.240</td><td class="num strong">16.536</td><td class="num">106.983</td><td class="num lv-ok">15%</td><td class="num st lv-ok">&#10003;</td></tr>
-<tr><td class="mono">CPT Nov 25 04:15</td><td class="num">13.0h</td><td class="num strong">8.837</td><td class="num">74</td><td class="num">3.091</td><td class="num">631</td><td class="num">5.041</td><td class="num faint">100.077</td><td class="num strong">19.701</td><td class="num">109.056</td><td class="num lv-ok">18%</td><td class="num st lv-ok">&#10003;</td></tr>
-<tr><td class="mono">CPT Nov 25 12:30</td><td class="num">21.2h</td><td class="num strong">1.500</td><td class="num">39</td><td class="num">1.103</td><td class="num">358</td><td class="num">0</td><td class="num faint">101.577</td><td class="num strong">20.843</td><td class="num">178.996</td><td class="num lv-ok">12%</td><td class="num st lv-ok">&#10003;</td></tr>
+    <div class="chdr"><span class="ctitle">OB CPT Windows</span><span><span class="badge b-slate">Rodeo &middot; next 24h</span><span class="sub" style="margin-left:6px">5.8m old</span><span class="vbadge v-ok">alle CPTs machbar</span></span></div>
+    <table class="ctbl"><thead><tr><th>CPT</th><th class="num">Hours ahead</th><th class="num">Units due</th><th class="num" title="Canonical OB state: picked up by the pick chain but not yet released to a picker.">ReadyToPick</th><th class="num" title="Canonical OB state (Rodeo: PickingNotYetPicked + CrossdockNotYetPicked): released, waiting for pick labour.">Pickable</th><th class="num">Picked</th><th class="num">Palletized</th><th class="num" title="Running total of Units due across every CPT from now through this one (includes volume already Picked/Palletized -- informational volume commitment, not a risk signal)">Cum. Units Due</th><th class="num" title="Running total of Pickable + ReadyToPick across every CPT from now through this one -- this is the number Status actually checks against Capacity.">Cum. Demand</th><th class="num" title="Tats&auml;chlich planbare Pick-Kapazit&auml;t von jetzt bis 0,5h vor diesem CPT (voller Wert, NICHT um den Risikofaktor gek&uuml;rzt).">Capacity</th><th class="num" title="Cum. Demand / Capacity. &Uuml;ber 85% = orange (Risikopuffer aufgebraucht), &uuml;ber 95% = rot">Auslastung</th><th class="num">Status</th></tr></thead><tbody><tr><td class="mono">CPT Nov 24 17:00</td><td class="num">1.7h</td><td class="num strong">1.228</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">1.228</td><td class="num faint">1.228</td><td class="num strong">0</td><td class="num">12.272</td><td class="num lv-ok">0%</td><td class="num st lv-ok">&#10003;</td></tr>
+<tr><td class="mono">CPT Nov 24 18:15</td><td class="num">3.0h</td><td class="num strong">20.655</td><td class="num">724</td><td class="num">47</td><td class="num">555</td><td class="num">19.329</td><td class="num faint">21.883</td><td class="num strong">771</td><td class="num">24.642</td><td class="num lv-ok">3%</td><td class="num st lv-ok">&#10003;</td></tr>
+<tr><td class="mono">CPT Nov 24 20:45</td><td class="num">5.5h</td><td class="num strong">20.675</td><td class="num">522</td><td class="num">2.133</td><td class="num">369</td><td class="num">17.651</td><td class="num faint">42.558</td><td class="num strong">3.426</td><td class="num">44.435</td><td class="num lv-ok">8%</td><td class="num st lv-ok">&#10003;</td></tr>
+<tr><td class="mono">CPT Nov 24 21:30</td><td class="num">6.2h</td><td class="num strong">2.476</td><td class="num">215</td><td class="num">955</td><td class="num">211</td><td class="num">1.095</td><td class="num faint">45.034</td><td class="num strong">4.596</td><td class="num">51.858</td><td class="num lv-ok">9%</td><td class="num st lv-ok">&#10003;</td></tr>
+<tr><td class="mono">CPT Nov 24 23:45</td><td class="num">8.5h</td><td class="num strong">13.730</td><td class="num">631</td><td class="num">3.245</td><td class="num">427</td><td class="num">9.427</td><td class="num faint">58.764</td><td class="num strong">8.472</td><td class="num">74.428</td><td class="num lv-ok">11%</td><td class="num st lv-ok">&#10003;</td></tr>
+<tr><td class="mono">CPT Nov 25 00:30</td><td class="num">9.2h</td><td class="num strong">602</td><td class="num">0</td><td class="num">18</td><td class="num">6</td><td class="num">578</td><td class="num faint">59.366</td><td class="num strong">8.490</td><td class="num">82.153</td><td class="num lv-ok">10%</td><td class="num st lv-ok">&#10003;</td></tr>
+<tr><td class="mono">CPT Nov 25 01:30</td><td class="num">10.2h</td><td class="num strong">7.404</td><td class="num">53</td><td class="num">1.770</td><td class="num">193</td><td class="num">5.388</td><td class="num faint">66.770</td><td class="num strong">10.313</td><td class="num">92.454</td><td class="num lv-ok">11%</td><td class="num st lv-ok">&#10003;</td></tr>
+<tr><td class="mono">CPT Nov 25 04:00</td><td class="num">12.7h</td><td class="num strong">24.470</td><td class="num">551</td><td class="num">5.672</td><td class="num">2.033</td><td class="num">16.214</td><td class="num faint">91.240</td><td class="num strong">16.536</td><td class="num">113.056</td><td class="num lv-ok">15%</td><td class="num st lv-ok">&#10003;</td></tr>
+<tr><td class="mono">CPT Nov 25 04:15</td><td class="num">13.0h</td><td class="num strong">8.837</td><td class="num">74</td><td class="num">3.091</td><td class="num">631</td><td class="num">5.041</td><td class="num faint">100.077</td><td class="num strong">19.701</td><td class="num">115.631</td><td class="num lv-ok">17%</td><td class="num st lv-ok">&#10003;</td></tr>
+<tr><td class="mono">CPT Nov 25 12:30</td><td class="num">21.2h</td><td class="num strong">1.500</td><td class="num">39</td><td class="num">1.103</td><td class="num">358</td><td class="num">0</td><td class="num faint">101.577</td><td class="num strong">20.843</td><td class="num">217.206</td><td class="num lv-ok">10%</td><td class="num st lv-ok">&#10003;</td></tr>
 </tbody></table>
   </div>
   </section>
 
-  
   <div class="footer">UFO Engine &middot; 2026-11-24 &middot; 15:15<span class="pind" id="pind"></span></div>
   </div>
 
 <script>
 (function () {
   var PAGE_MS = 30000;
-  var all   = [].slice.call(document.querySelectorAll('.page'));
+  var pages = [].slice.call(document.querySelectorAll('.page'));
   var ind   = document.getElementById('pind');
   var wrap  = document.getElementById('fit');
-  var cur   = null;
-  // Start-meeting slides (data-sw-day) never rotate; they take the screen for
-  // their whole window instead (shiftwash_sent.MEETING_WINDOWS).
-  var pages = [], meet = [];
-  for (var a = 0; a < all.length; a++) {
-    (all[a].hasAttribute('data-sw-day') ? meet : pages).push(all[a]);
-  }
+  var cur   = -1;
 
   // Shrink to fit rather than scroll. A kiosk TV has no scrollbar and no input
   // device, so anything past the fold is simply invisible to the shift.
@@ -230,55 +218,15 @@
   // every 30s), which would reset any load-relative timer and could strand the
   // screen on page 1 forever. Deriving the active page from Date.now() keeps the
   // cadence continuous across those reloads.
-  function pad(n) { return (n < 10 ? '0' : '') + n; }
-
-  // Berlin wall clock, whatever zone the TV is set to. Day + HH:MM as strings,
-  // so the window test is a plain string compare.
-  function berlin() {
-    var d = new Date();
-    try {
-      var o = {}, parts = new Intl.DateTimeFormat('en-GB', {timeZone: 'Europe/Berlin',
-        year: 'numeric', month: '2-digit', day: '2-digit',
-        hour: '2-digit', minute: '2-digit', hourCycle: 'h23'}).formatToParts(d);
-      for (var k = 0; k < parts.length; k++) o[parts[k].type] = parts[k].value;
-      return {day: o.year + '-' + o.month + '-' + o.day,
-              hm: (o.hour === '24' ? '00' : o.hour) + ':' + o.minute};
-    } catch (e) {
-      return {day: d.getFullYear() + '-' + pad(d.getMonth() + 1) + '-' + pad(d.getDate()),
-              hm: pad(d.getHours()) + ':' + pad(d.getMinutes())};
-    }
-  }
-
-  // The meeting slide whose window is now -- only on the day it was published
-  // for, so a stale copy (publisher down) never shows last week's Shiftwash.
-  function meeting() {
-    if (!meet.length) return null;
-    var b = berlin();
-    for (var k = 0; k < meet.length; k++) {
-      var m = meet[k];
-      if (m.getAttribute('data-sw-day') === b.day &&
-          m.getAttribute('data-sw-from') <= b.hm && b.hm <= m.getAttribute('data-sw-to')) {
-        return m;
-      }
-    }
-    return null;
-  }
-
   function show() {
-    var on = meeting(), label = 'Start Meeting';
-    if (!on) {
-      if (!pages.length) return;
-      var i = Math.floor(Date.now() / PAGE_MS) % pages.length;
-      on = pages[i];
-      label = (i + 1) + '/' + pages.length;
+    if (!pages.length) return;
+    var i = Math.floor(Date.now() / PAGE_MS) % pages.length;
+    if (i === cur) return;
+    cur = i;
+    for (var k = 0; k < pages.length; k++) {
+      pages[k].className = 'page' + (k === i ? ' pg-on' : '');
     }
-    if (on === cur) return;
-    cur = on;
-    for (var k = 0; k < all.length; k++) {
-      if (all[k] === on) all[k].classList.add('pg-on');
-      else all[k].classList.remove('pg-on');
-    }
-    if (ind) ind.textContent = label;
+    if (ind) ind.textContent = (i + 1) + '/' + pages.length;
     fit();
   }
 
